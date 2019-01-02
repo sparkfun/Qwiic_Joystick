@@ -17575,15 +17575,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="H3" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
 <part name="H4" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
 <part name="U2" library="SparkFun-IC-Microcontroller" deviceset="ATTINY85" device=""/>
+<part name="H5" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
+<part name="H6" library="SparkFun-Hardware" deviceset="STAND-OFF" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="166.6748" y="11.3284" size="2.54" layer="94" font="vector">Nick Poole</text>
-<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v01</text>
+<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v10</text>
 <text x="209.9818" y="165.9382" size="1.778" layer="97" font="vector">Power
 Indicator</text>
-<text x="169.9768" y="7.0104" size="2.54" layer="94" font="vector">Kevin Kuwata</text>
+<text x="169.9768" y="7.0104" size="2.54" layer="94" font="vector">Kevin Kuwata, Andy England</text>
 <text x="108.966" y="51.308" size="2.032" layer="97" font="vector" rot="R90" align="top-left">I2C Port</text>
 <text x="96.52" y="154.94" size="1.778" layer="97" font="vector">Pogo Programmer</text>
 <wire x1="0" y1="109.22" x2="147.32" y2="109.22" width="0.2032" layer="97" style="longdash"/>
@@ -17597,6 +17599,7 @@ from the I2C bus</text>
 <text x="2.54" y="180.34" size="2.54" layer="97" font="vector">ATTiny85</text>
 <text x="149.86" y="104.14" size="2.54" layer="97" font="vector">Joystick</text>
 <text x="2.54" y="104.14" size="2.54" layer="97" font="vector">I2C Connections</text>
+<text x="2.54" y="177.8" size="1.27" layer="97" font="vector">Vin: 2.7-5.5V</text>
 </plain>
 <instances>
 <instance part="JP2" gate="G$1" x="241.3" y="30.48"/>
@@ -17614,7 +17617,8 @@ from the I2C bus</text>
 </instance>
 <instance part="LOGO1" gate="G$1" x="169.672" y="44.958"/>
 <instance part="U$1" gate="G$1" x="190.5" y="35.56"/>
-<instance part="J6" gate="G$1" x="104.14" y="142.24">
+<instance part="J6" gate="G$1" x="104.14" y="142.24" smashed="yes">
+<attribute name="NAME" x="99.06" y="147.828" size="1.778" layer="95" font="vector"/>
 <attribute name="NAME" x="99.06" y="147.828" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND5" gate="1" x="116.84" y="134.62"/>
@@ -17677,6 +17681,8 @@ from the I2C bus</text>
 <attribute name="VALUE" x="33.02" y="132.08" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="33.02" y="152.908" size="1.778" layer="95" font="vector"/>
 </instance>
+<instance part="H5" gate="G$1" x="231.14" y="30.48"/>
+<instance part="H6" gate="G$1" x="231.14" y="27.94"/>
 </instances>
 <busses>
 </busses>
