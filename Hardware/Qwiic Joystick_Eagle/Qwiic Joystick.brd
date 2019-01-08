@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3721,25 +3721,25 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-MINI" value="OSHW-LOGOMINI" x="16.51" y="12.7" rot="MR270"/>
 <element name="LOGO2" library="SparkFun-Aesthetics" package="REVISION" value="REVISION" x="-1.27" y="-15.24"/>
-<element name="R1" library="SparkFun-Resistors" package="0603" value="2.2K" x="19.05" y="44.45" rot="R180">
+<element name="R1" library="SparkFun-Resistors" package="0603" value="2.2k" x="19.05" y="44.45" rot="R180">
 <attribute name="NAME" x="19.05" y="43.688" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-07857" x="19.05" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="19.05" y="45.212" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<attribute name="PROD_ID" value="RES-08272" x="19.05" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="2.2k" x="19.05" y="45.212" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
 <element name="R6" library="SparkFun-Resistors" package="0603" value="1k" x="12.7" y="44.45" rot="R180">
 <attribute name="NAME" x="12.7" y="43.688" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="RES-07856" x="12.7" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="12.7" y="45.212" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R7" library="SparkFun-Resistors" package="0603" value="2.2K" x="6.35" y="44.45">
+<element name="R7" library="SparkFun-Resistors" package="0603" value="2.2k" x="6.35" y="44.45">
 <attribute name="NAME" x="6.35" y="45.212" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-07857" x="6.35" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="6.35" y="43.688" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<attribute name="PROD_ID" value="RES-08272" x="6.35" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" value="2.2k" x="6.35" y="43.688" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" package="0603" value="10K" x="6.35" y="41.91" rot="R180">
+<element name="R8" library="SparkFun-Resistors" package="0603" value="10k" x="6.35" y="41.91" rot="R180">
 <attribute name="NAME" x="6.35" y="41.148" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-00818" x="6.35" y="41.91" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="6.35" y="42.672" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<attribute name="PROD_ID" value="RES-00824" x="6.35" y="41.91" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="10k" x="6.35" y="42.672" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
 <element name="S1" library="SparkFun-Switches" package="JOYSTICK" value="JOYSTICK_THUMB" x="12.7" y="12.7">
 <attribute name="NAME" x="-0.127" y="12.7" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
