@@ -1,15 +1,15 @@
 /*
   An I2C based Thumb Joystick
   By: Nathan Seidle
-  Modified by: Wed Furuya
+  Modified by: Wes Furuya
   SparkFun Electronics
   Date: February 5, 2019
   License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
 
   Qwiic Joystick is an I2C based thumb joystick that reports the joystick position and if the button is pressed.
 
-    Feel like supporting our work? Buy a board from SparkFun!
-  https://www.sparkfun.com/products/15083
+  Feel like supporting our work? Buy a board from SparkFun!
+  https://www.sparkfun.com/products/15168
 
   To install support for ATtiny84 in Arduino IDE: https://github.com/SpenceKonde/ATTinyCore/blob/master/Installation.md
   This core is installed from the Board Manager menu
@@ -25,7 +25,7 @@
 #include <EEPROM.h>
 #include "nvm.h"
 
-#if defined(__AVR_ATtiny84__)
+#if defined(__AVR_ATtiny85__)
 #include "PinChangeInterrupt.h" //Nico Hood's library: https://github.com/NicoHood/PinChangeInterrupt/
 //Used for pin change interrupts on ATtinys (joystick button causes interrupt)
 //Note: To make this code work with Nico's library you have to comment out https://github.com/NicoHood/PinChangeInterrupt/blob/master/src/PinChangeInterruptSettings.h#L228
@@ -40,11 +40,11 @@ const byte Button_Pin = 2;
 const byte Vertical_Pin = A1;
 const byte Horizontal_Pin = A0;
 
-#elif defined(__AVR_ATtiny84__)
+#elif defined(__AVR_ATtiny85__)
 //Hardware connections for the final design
 const byte Button_Pin = 1;
 const byte Vertical_Pin = 3;
-const byte Horizontal_Pin = 4;
+const byte Horizontal_Pin = 2;
 #endif
 
 //Global variables
@@ -68,9 +68,6 @@ struct memoryMap {
                         //             read of button state (Reg 0x07). Clears after read.
   byte i2cAddress;      // Reg: 0x09 - Set I2C New Address (re-writable)
 };
-
-const byte statusButtonClickedBit = 2;
-const byte statusButtonPressedBit = 1;
 
 //These are the default values for all settings
 volatile memoryMap registerMap = {
@@ -96,7 +93,7 @@ memoryMap protectionMap = {
   .Y_MSB = 0x00,
   .Y_LSB = 0x00,
   .Button_State = 0x00,
-  .Button_Status = (1 << statusButtonClickedBit), //Button pressed (1)
+  .Button_Status = 0x00,
   .i2cAddress = 0xFF,
 };
 
@@ -144,13 +141,16 @@ void loop(void)
   Serial.print("X: ");
   Serial.print(X_Pos);
 
-  Serial.print("Y: ");
+  Serial.print(" Y: ");
   Serial.print(Y_Pos);
 
-  Serial.print("Reg: ");
-  Serial.print(registerNumber);
+  Serial.print(" Reg: ");
+  Serial.print(registerMap.i2cAddress);
+  
+  Serial.print(" ID: ");
+  Serial.print(registerMap.id);
 
-  if (registerMap.Button_Status & (1 << statusButtonClickedBit) )
+  if (registerMap.Button_Status == 1)
     Serial.print(" Click");
 
   Serial.println();
@@ -180,7 +180,7 @@ void recordSystemSettings(void)
   EEPROM.get(LOCATION_I2C_ADDRESS, i2cAddr);
   if (i2cAddr != registerMap.i2cAddress)
   {
-    EEPROM.put(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
     startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
     Serial.print("New Address: 0x");
     Serial.println(registerMap.i2cAddress, HEX);

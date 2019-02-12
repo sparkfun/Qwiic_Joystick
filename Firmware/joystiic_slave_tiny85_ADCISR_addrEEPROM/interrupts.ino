@@ -1,11 +1,11 @@
-//Turn on interrupts for the various pins
+//Turn on interrupt for the button
 void setupInterrupts()
 {
   //Attach interrupt to button
   #if defined(__AVR_ATmega328P__)
   attachInterrupt(digitalPinToInterrupt(Button_Pin), buttonInterrupt, CHANGE);
   
-  #elif defined(__AVR_ATtiny84__)
+  #elif defined(__AVR_ATtiny85__)
   attachPCINT(digitalPinToPCINT(Button_Pin), buttonInterrupt, CHANGE);
   #endif
 }
@@ -14,11 +14,9 @@ void setupInterrupts()
 //Called any time the pin changes state
 void buttonInterrupt()
 {
-  registerMap.Button_Status ^= (1 << statusButtonPressedBit); //Toggle the status bit to indicate button interaction
-
   if (digitalRead(Button_Pin) == LOW) //User has released the button, we have completed a click cycle
   {
-    registerMap.Button_Status |= (1 << statusButtonClickedBit); //Set the clicked bit
+    registerMap.Button_Status = 1; //Set the clicked bit
   }
 }
 
@@ -70,6 +68,8 @@ void receiveEvent(int numberOfBytesReceived)
 {
   registerNumber = Wire.read(); //Get the memory map offset from the user
 
+  
+
   //Begin recording the following incoming bytes to the temp memory map
   //starting at the registerNumber (the first byte received)
   for (byte x = 0 ; x < numberOfBytesReceived - 1 ; x++)
@@ -84,11 +84,13 @@ void receiveEvent(int numberOfBytesReceived)
       *(registerPointer + registerNumber + x) |= temp & *(protectionPointer + registerNumber + x); //Or in the user's request (clensed against protection bits)
     }
   }
+
+  recordSystemSettings();
 }
 
 
 //Respond to GET commands
-//When QwiicJoystick gets a request for data from the user, this function is called as an interrupt
+//When Qwiic Joystick gets a request for data from the user, this function is called as an interrupt
 //The interrupt will respond with bytes starting from the last byte the user sent to us
 //While we are sending bytes we may have to do some calculations
 void requestEvent()
@@ -100,8 +102,4 @@ void requestEvent()
   //the register the user requested, and when it reaches the end the master
   //will read 0xFFs.
   Wire.write((registerPointer + registerNumber), sizeof(memoryMap) - registerNumber);
-  if (registerPointer == 0x07 || 0x08)
-  {
-    registerMap.Button_Status = 0x00;
-  }
 }
