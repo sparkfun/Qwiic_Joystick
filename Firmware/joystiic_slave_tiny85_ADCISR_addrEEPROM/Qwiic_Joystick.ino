@@ -5,20 +5,15 @@
   SparkFun Electronics
   Date: February 5, 2019
   License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
-
   Qwiic Joystick is an I2C based thumb joystick that reports the joystick position and if the button is pressed.
-
   Feel like supporting our work? Buy a board from SparkFun!
   https://www.sparkfun.com/products/15168
-
   To install support for ATtiny84 in Arduino IDE: https://github.com/SpenceKonde/ATTinyCore/blob/master/Installation.md
   This core is installed from the Board Manager menu
   This core has built in support for I2C S/M and serial
   If you have Dave Mellis' ATtiny installed you may need to remove it from \Users\xx\AppData\Local\Arduino15\Packages
-
   To support 400kHz I2C communication reliably ATtiny84 needs to run at 8MHz. This requires user to
   click on 'Burn Bootloader' before code is loaded.
-
 */
 
 #include <Wire.h>
@@ -66,20 +61,22 @@ struct memoryMap {
   byte Button_State;    // Reg: 0x07 - Current Button State (clears Reg 0x08)
   byte Button_Status;   // Reg: 0x08 - Indicator for if button was pressed since last
                         //             read of button state (Reg 0x07). Clears after read.
-  byte i2cAddress;      // Reg: 0x09 - Set I2C New Address (re-writable)
+  byte i2cLock;         // Reg: 0x09 - Must be changed to 0x13 before I2C address can be changed.
+  byte i2cAddress;      // Reg: 0x0A - Set I2C New Address (re-writable). Clears i2cLock.
 };
 
 //These are the default values for all settings
 volatile memoryMap registerMap = {
   .id = I2C_ADDRESS_DEFAULT, //Default I2C Address (0x20)
   .firmwareMajor = 0x02, //Firmware version. Helpful for tech support.
-  .firmwareMinor = 0x01,
+  .firmwareMinor = 0x02,
   .X_MSB = 0,
   .X_LSB = 0,
   .Y_MSB = 0,
   .Y_LSB = 0,
   .Button_State = 0x00,
   .Button_Status = 0x00,
+  .i2cLock = 0x00,
   .i2cAddress = I2C_ADDRESS_DEFAULT,
 };
 
@@ -94,6 +91,7 @@ memoryMap protectionMap = {
   .Y_LSB = 0x00,
   .Button_State = 0x00,
   .Button_Status = 0x00,
+  .i2cLock = 0xFF,
   .i2cAddress = 0xFF,
 };
 
@@ -153,6 +151,26 @@ void loop(void)
   if (registerMap.Button_Status == 1)
     Serial.print(" Click");
 
+
+//  Serial.print(registerMap.id, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.firmwareMajor, HEX);
+//  Serial.print(".");
+//  Serial.print(registerMap.firmwareMinor, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.X_MSB);
+//  Serial.print(registerMap.X_LSB, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.Y_MSB);
+//  Serial.print(registerMap.Y_LSB, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.Button_State, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.Button_Status, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.i2cLock, HEX);
+//  Serial.print(" ");
+//  Serial.print(registerMap.i2cAddress, HEX);
   Serial.println();
   delay(200);
 #endif
@@ -178,12 +196,15 @@ void recordSystemSettings(void)
 
   //Read the value currently in EEPROM. If it's different from the memory map then record the memory map value to EEPROM.
   EEPROM.get(LOCATION_I2C_ADDRESS, i2cAddr);
-  if (i2cAddr != registerMap.i2cAddress)
-  {
+  if (i2cAddr != registerMap.i2cAddress && registerMap.i2cLock == 0x13)
+  {    
+    //Serial.print(registerMap.i2cLock, HEX);
+    registerMap.i2cLock = 0x00;
+    //Serial.println(registerMap.i2cLock, HEX);
     EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
     startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
-    Serial.print("New Address: 0x");
-    Serial.println(registerMap.i2cAddress, HEX);
+    //Serial.print("New Address: 0x");
+    //Serial.println(registerMap.i2cAddress, HEX);
   }
 }
 
