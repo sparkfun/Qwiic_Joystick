@@ -19,8 +19,8 @@ def qwiicjoystick():
     except Exception as e:
         print(e)
 
-    X = bus_data[0]<<2 | bus_data[1]
-    Y = bus_data[2]<<2 | bus_data[3]
+    X = (bus_data[0]<<8 | bus_data[1])>>6
+    Y = (bus_data[2]<<8 | bus_data[3])>>6
     
     print(X, Y, " Button = ", bus_data[4])
     

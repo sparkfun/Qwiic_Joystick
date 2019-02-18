@@ -93,8 +93,8 @@ def runGame():
             bus_data = bus.read_i2c_block_data(addr, 0x03, 5)
         except Exception as e:
             print(e)
-        X = bus_data[0]<<2 | bus_data[1]
-        Y = bus_data[2]<<2 | bus_data[3]
+        X = (bus_data[0]<<8 | bus_data[1])>>6
+        Y = (bus_data[2]<<8 | bus_data[3])>>6
         if X < 450:
             direction = RIGHT
         elif 575 < X:
