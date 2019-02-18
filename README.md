@@ -26,7 +26,7 @@ Thanks to an ATtiny85 on the [Qwiic Joystick](https://www.sparkfun.com/products/
 
 In the registers for the joystick position, the MSB contains the first 8 bits of the 10-bit ADC value and the LSB contains the last two bits. As an example, this is how the library converts the two registers back to a 10-bit value.
 
-`uint_16t full10bitvalue = MSB << 2 | LSB;`
+`uint_16t full10bitvalue = (MSB | LSB)>>6;`
 
 You could potentially only look at the MSB and get an 8-bit (256 position) reading. The firmware was intentionally written this way in the hopes that it would be useful for customers who don't need the full resolution of the joystick position.
 

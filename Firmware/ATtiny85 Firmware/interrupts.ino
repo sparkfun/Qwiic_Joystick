@@ -40,22 +40,18 @@ void updateJoystick() {
   //Split the bitshifted word into the MSB and LSB parts
   //Continuing from the example above...
   //DEC:            630
-  //BIN:            10011101   10
   //Bitshift by 6:  10011101   10000000
   //Split:          10011101 | 10000000
-  //Shift LSB by 6:            10
-  //                    MSB  |  LSB
-  //                10011101   10
 
   byte * bytePointer;
 
   bytePointer = (byte*)&X_unit16;
   registerMap.X_MSB = bytePointer[1];
-  registerMap.X_LSB = bytePointer[0]>>6;
+  registerMap.X_LSB = bytePointer[0];
   
   bytePointer = (byte*)&Y_unit16;
   registerMap.Y_MSB = bytePointer[1];
-  registerMap.Y_LSB = bytePointer[0]>>6;
+  registerMap.Y_LSB = bytePointer[0];
 
   //Shut off ADC
   ADCSRA &= ~(1 << ADEN);

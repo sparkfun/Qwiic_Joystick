@@ -111,7 +111,6 @@ void setup(void)
   pinMode(Vertical_Pin, INPUT); //No pull-up. External 10k
   pinMode(Horizontal_Pin, INPUT); //No pull-up. External 10k
 
-  turnOffExtraBits(); //Turn off all unused peripherals
   readSystemSettings(); //Load all system settings from EEPROM
   setupInterrupts(); //Enable pin change interrupts for I2C and button
   startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
@@ -133,8 +132,8 @@ void loop(void)
 
   updateJoystick();
   
-  uint16_t X_Pos =  (registerMap.X_MSB<<2) | registerMap.X_LSB;
-  uint16_t Y_Pos =  (registerMap.Y_MSB<<2) | registerMap.Y_LSB;
+  uint16_t X_Pos =  ((registerMap.X_MSB<<8) | registerMap.X_LSB)>>6;
+  uint16_t Y_Pos =  )(registerMap.Y_MSB<<8) | registerMap.Y_LSB)>>6;
 
   Serial.print("X: ");
   Serial.print(X_Pos);
@@ -201,7 +200,7 @@ void recordSystemSettings(void)
     //Serial.print(registerMap.i2cLock, HEX);
     registerMap.i2cLock = 0x00;
     //Serial.println(registerMap.i2cLock, HEX);
-    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+    EEPROM.update(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
     startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
     //Serial.print("New Address: 0x");
     //Serial.println(registerMap.i2cAddress, HEX);
@@ -217,7 +216,7 @@ void readSystemSettings(void)
   if (registerMap.i2cAddress == 0xFF) //Blank
   {
     registerMap.i2cAddress = I2C_ADDRESS_DEFAULT; //By default, we listen for I2C_ADDRESS_DEFAULT
-    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+    EEPROM.update(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
   }
 
   //Error check I2C address we read from EEPROM
@@ -226,22 +225,9 @@ void readSystemSettings(void)
     //User has set the address out of range
     //Go back to defaults
     registerMap.i2cAddress = I2C_ADDRESS_DEFAULT;
-    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+    EEPROM.update(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
   }
 
-}
-
-//Turn off anything we aren't going to use
-void turnOffExtraBits()
-{
-  //Disble Brown-Out Detect
-  MCUCR = bit (BODS) | bit (BODSE);
-  MCUCR = bit (BODS);
-
-  //Power down various bits of hardware to lower power usage
-  //set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  set_sleep_mode(SLEEP_MODE_IDLE);
-  sleep_enable();
 }
 
 //Begin listening on I2C bus as I2C slave using the global variable setting_i2c_address
