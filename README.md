@@ -43,7 +43,7 @@ Documentation
 
 Product Versions
 ----------------
-* [COM-15168] (https://www.sparkfun.com/products/15168)- Retail packaging of standard description here
+* [COM-15168](https://www.sparkfun.com/products/15168)- Retail packaging of standard description here
 
 Version History
 ---------------
