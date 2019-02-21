@@ -69,7 +69,7 @@ struct memoryMap {
 volatile memoryMap registerMap = {
   .id = I2C_ADDRESS_DEFAULT, //Default I2C Address (0x20)
   .firmwareMajor = 0x02, //Firmware version. Helpful for tech support.
-  .firmwareMinor = 0x03,
+  .firmwareMinor = 0x04,
   .X_MSB = 0,
   .X_LSB = 0,
   .Y_MSB = 0,
@@ -111,7 +111,7 @@ void setup(void)
   pinMode(Vertical_Pin, INPUT); //No pull-up. External 10k
   pinMode(Horizontal_Pin, INPUT); //No pull-up. External 10k
 
-  turnOffExtraBits(); //Turn off all unused peripherals
+  //turnOffExtraBits(); //Turn off all unused peripherals
   readSystemSettings(); //Load all system settings from EEPROM
   setupInterrupts(); //Enable pin change interrupts for I2C and button
   startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
