@@ -111,6 +111,7 @@ void setup(void)
   pinMode(Vertical_Pin, INPUT); //No pull-up. External 10k
   pinMode(Horizontal_Pin, INPUT); //No pull-up. External 10k
 
+  turnOffExtraBits(); //Turn off all unused peripherals
   readSystemSettings(); //Load all system settings from EEPROM
   setupInterrupts(); //Enable pin change interrupts for I2C and button
   startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
@@ -223,6 +224,19 @@ void readSystemSettings(void)
     EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
   }
 
+}
+
+//Turn off anything we aren't going to use
+void turnOffExtraBits()
+{
+  //Disble Brown-Out Detect
+  MCUCR = bit (BODS) | bit (BODSE);
+  MCUCR = bit (BODS);
+
+  //Power down various bits of hardware to lower power usage
+  //set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  set_sleep_mode(SLEEP_MODE_IDLE);
+  sleep_enable();
 }
 
 
