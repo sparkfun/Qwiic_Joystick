@@ -9,7 +9,7 @@ import random, pygame, sys, smbus, time
 from pygame.locals import *
 
 FPS = 15
-MULTIPLIER = 19
+MULTIPLIER = 18
 WINDOWWIDTH = 96*MULTIPLIER
 WINDOWHEIGHT = 54*MULTIPLIER
 CELLSIZE = 3*MULTIPLIER
@@ -36,10 +36,8 @@ RIGHT = 'right'
 
 HEAD = 0 # syntactic sugar: index of the worm's head
 
-addr = 0x20
-
 def main():
-    global FPSCLOCK, DISPLAYSURF, BASICFONT, flamecell, bus_data, X, Y, addr
+    global FPSCLOCK, DISPLAYSURF, BASICFONT, flamecell, bus_data, X, Y
 
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
@@ -57,8 +55,12 @@ def main():
 
 
 def runGame():
+    global bus_data, X, Y
+    
     ## I2C bus start
     bus = smbus.SMBus(1)
+    addr = 0x20
+    
     
     # Set a random start point.
     startx = random.randint(5, CELLWIDTH - 6)
@@ -148,6 +150,8 @@ def drawPressKeyMsg():
 
 # KRT 14/06/2012 rewrite event detection to deal with mouse use
 def checkForKeyPress():
+    global bus_data
+    
     for event in pygame.event.get():
         if event.type == QUIT:      #event is quit 
             terminate()
@@ -160,6 +164,7 @@ def checkForKeyPress():
     
     ## I2C bus start
     bus = smbus.SMBus(1)
+    addr = 0x20
     
     # Reads Qwiic Joystick
     try:

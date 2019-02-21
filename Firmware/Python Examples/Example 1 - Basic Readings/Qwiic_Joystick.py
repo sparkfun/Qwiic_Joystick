@@ -9,12 +9,17 @@ def main():
 
 
 def qwiicjoystick():
+    global bus_data, X, Y
+    
+
     try:
         bus_data = bus.read_i2c_block_data(addr, 0x03, 5)
         #X_MSB = bus.read_byte_data(addr, 0x03) # Reads MSB for horizontal joystick position
         #X_LSB = bus.read_byte_data(addr, 0x04) # Reads LSB for horizontal joystick position
+    
         #Y_MSB = bus.read_byte_data(addr, 0x05) # Reads MSB for vertical joystick position
         #Y_LSB = bus.read_byte_data(addr, 0x06) # Reads LSB for vertical joystick position
+
         #Select_Button = bus.read_byte_data(addr, 0x07) # Reads button position
     except Exception as e:
         print(e)
