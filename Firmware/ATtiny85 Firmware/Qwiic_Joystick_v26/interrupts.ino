@@ -63,7 +63,9 @@ void updateJoystick() {
 //(Serves rewritable I2C address)
 void receiveEvent(int numberOfBytesReceived)
 {
+  //TinySerial.println("Start RX Event"); //Debug message
   registerNumber = Wire.read(); //Get the memory map offset from the user
+  //TinySerial.println("  Read 4 Register"); //Debug message
 
   
 
@@ -81,8 +83,9 @@ void receiveEvent(int numberOfBytesReceived)
       *(registerPointer + registerNumber + x) |= temp & *(protectionPointer + registerNumber + x); //Or in the user's request (clensed against protection bits)
     }
   }
-
+  //TinySerial.println("  Read 4 Data"); //Debug message
   recordSystemSettings();
+  //TinySerial.println("  Data Saved"); //Debug message
 }
 
 

@@ -36,6 +36,12 @@ const byte Vertical_Pin = A1;
 const byte Horizontal_Pin = A0;
 
 #elif defined(__AVR_ATtiny85__)
+////For Debug Only
+//#include <SoftwareSerial.h>
+//#define TX    3   //P3, Pin 2
+//#define RX    4   //P4, Pin 3
+//SoftwareSerial TinySerial(RX, TX);
+
 //Hardware connections for the final design
 const byte Button_Pin = 1;
 const byte Vertical_Pin = 3;
@@ -69,7 +75,7 @@ struct memoryMap {
 volatile memoryMap registerMap = {
   .id = I2C_ADDRESS_DEFAULT, //Default I2C Address (0x20)
   .firmwareMajor = 0x02, //Firmware version. Helpful for tech support.
-  .firmwareMinor = 0x04,
+  .firmwareMinor = 0x06,
   .X_MSB = 0,
   .X_LSB = 0,
   .Y_MSB = 0,
@@ -90,7 +96,7 @@ memoryMap protectionMap = {
   .Y_MSB = 0x00,
   .Y_LSB = 0x00,
   .Button_State = 0x00,
-  .Button_Status = 0x00,
+  .Button_Status = 0x01,
   .i2cLock = 0xFF,
   .i2cAddress = 0xFF,
 };
@@ -111,7 +117,7 @@ void setup(void)
   pinMode(Vertical_Pin, INPUT); //No pull-up. External 10k
   pinMode(Horizontal_Pin, INPUT); //No pull-up. External 10k
 
-  //turnOffExtraBits(); //Turn off all unused peripherals
+  turnOffExtraBits(); //Turn off all unused peripherals
   readSystemSettings(); //Load all system settings from EEPROM
   setupInterrupts(); //Enable pin change interrupts for I2C and button
   startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
@@ -122,13 +128,20 @@ void setup(void)
   Serial.print("Address: 0x");
   Serial.print(registerMap.i2cAddress, HEX);
   Serial.println();
-
+//// For Debug
+//#else defined(__AVR_ATtiny85__)
+//  TinySerial.begin(9600);
+//  TinySerial.println("Qwiic Joystick");
+//  TinySerial.print("Address: 0x");
+//  TinySerial.print(registerMap.i2cAddress, HEX);
+//  TinySerial.println();
 #endif
 }
 
 void loop(void)
 {
 
+// Debug and Testing
 #if defined(__AVR_ATmega328P__)
 
   updateJoystick();
@@ -146,7 +159,7 @@ void loop(void)
   Serial.print(registerMap.i2cAddress);
   
   Serial.print(" ID: ");
-  Serial.print(registerMap.id);
+  Serial.print(registerMap.i2cLock);
 
   if (registerMap.Button_Status == 1)
     Serial.print(" Click");
@@ -173,10 +186,19 @@ void loop(void)
 //  Serial.print(registerMap.i2cAddress, HEX);
   Serial.println();
   delay(200);
+//#else defined(__AVR_ATtiny85__)
+//  TinySerial.print(" Addr: ");
+//  TinySerial.print(registerMap.i2cAddress);
+//  
+//  TinySerial.print(" Lock: ");
+//  TinySerial.print(registerMap.i2cLock);
+//
+//  TinySerial.println();
+//  delay(200);
 #endif
 
   //Sleep until interrupt
-  set_sleep_mode(SLEEP_MODE_IDLE);
+  //set_sleep_mode(SLEEP_MODE_IDLE);
   sleep_mode(); //Stop everything and go to sleep. Wake up from Button interrupts.
 }
 
@@ -186,6 +208,8 @@ void recordSystemSettings(void)
   //I2C address is byte
   byte i2cAddr;
 
+  //TinySerial.println("Set Registers"); //Debug message
+
   //Error check the current I2C address
   if (registerMap.i2cAddress < 0x08 || registerMap.i2cAddress > 0x77)
   {
@@ -194,17 +218,20 @@ void recordSystemSettings(void)
     registerMap.i2cAddress = I2C_ADDRESS_DEFAULT;
   }
 
+  //TinySerial.println("  Check value is in range"); //Debug message
+
+  
   //Read the value currently in EEPROM. If it's different from the memory map then record the memory map value to EEPROM.
   EEPROM.get(LOCATION_I2C_ADDRESS, i2cAddr);
   if (i2cAddr != registerMap.i2cAddress && registerMap.i2cLock == 0x13)
   {    
-    //Serial.print(registerMap.i2cLock, HEX);
+    //TinySerial.print(registerMap.i2cLock, HEX); //Debug message
     registerMap.i2cLock = 0x00;
-    //Serial.println(registerMap.i2cLock, HEX);
+    //TinySerial.println(registerMap.i2cLock, HEX); //Debug message
     EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
     startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
-    //Serial.print("New Address: 0x");
-    //Serial.println(registerMap.i2cAddress, HEX);
+    //TinySerial.print("New Address: 0x"); //Debug message
+    //TinySerial.println(registerMap.i2cAddress, HEX); //Debug message
   }
 }
 
@@ -229,9 +256,9 @@ void readSystemSettings(void)
 //Turn off anything we aren't going to use
 void turnOffExtraBits()
 {
-  //Disble Brown-Out Detect
-  MCUCR = bit (BODS) | bit (BODSE);
-  MCUCR = bit (BODS);
+//  //Disable Brown-Out Detect
+//  MCUCR = bit (BODS) | bit (BODSE);
+//  MCUCR = bit (BODS);
 
   //Power down various bits of hardware to lower power usage
   //set_sleep_mode(SLEEP_MODE_PWR_DOWN);

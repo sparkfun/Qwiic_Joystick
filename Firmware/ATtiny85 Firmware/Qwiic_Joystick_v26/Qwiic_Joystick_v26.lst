@@ -1,0 +1,2109 @@
+
+C:\Users\WESLEY~1.FUR\AppData\Local\Temp\arduino_build_960033/Qwiic_Joystick_v26.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+   0:	20 c0       	rjmp	.+64     	; 0x42 <__ctors_end>
+   2:	3a c0       	rjmp	.+116    	; 0x78 <__bad_interrupt>
+   4:	4c c3       	rjmp	.+1688   	; 0x69e <__vector_2>
+   6:	38 c0       	rjmp	.+112    	; 0x78 <__bad_interrupt>
+   8:	37 c0       	rjmp	.+110    	; 0x78 <__bad_interrupt>
+   a:	81 c4       	rjmp	.+2306   	; 0x90e <__vector_5>
+   c:	35 c0       	rjmp	.+106    	; 0x78 <__bad_interrupt>
+   e:	34 c0       	rjmp	.+104    	; 0x78 <__bad_interrupt>
+  10:	33 c0       	rjmp	.+102    	; 0x78 <__bad_interrupt>
+  12:	32 c0       	rjmp	.+100    	; 0x78 <__bad_interrupt>
+  14:	31 c0       	rjmp	.+98     	; 0x78 <__bad_interrupt>
+  16:	30 c0       	rjmp	.+96     	; 0x78 <__bad_interrupt>
+  18:	2f c0       	rjmp	.+94     	; 0x78 <__bad_interrupt>
+  1a:	24 c2       	rjmp	.+1096   	; 0x464 <__vector_13>
+  1c:	6b c2       	rjmp	.+1238   	; 0x4f4 <__vector_14>
+
+0000001e <__trampolines_end>:
+__trampolines_start():
+  1e:	01 02       	muls	r16, r17
+  20:	00 00       	nop
+  22:	04 00       	.word	0x0004	; ????
+
+00000024 <digital_pin_to_bit_mask_PGM>:
+  24:	01 02 04 08 10 20                                   ..... 
+
+0000002a <digital_pin_to_port_PGM>:
+  2a:	02 02 02 02 02 02                                   ......
+
+00000030 <port_to_input_PGM>:
+  30:	00 00 00 00 36 00                                   ....6.
+
+00000036 <port_to_output_PGM>:
+  36:	00 00 00 00 38 00                                   ....8.
+
+0000003c <port_to_mode_PGM>:
+  3c:	00 00 00 00 37 00                                   ....7.
+
+00000042 <__ctors_end>:
+__dtors_end():
+  42:	11 24       	eor	r1, r1
+  44:	1f be       	out	0x3f, r1	; 63
+  46:	cf e5       	ldi	r28, 0x5F	; 95
+  48:	d2 e0       	ldi	r29, 0x02	; 2
+  4a:	de bf       	out	0x3e, r29	; 62
+  4c:	cd bf       	out	0x3d, r28	; 61
+
+0000004e <__do_copy_data>:
+__do_copy_data():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+  4e:	10 e0       	ldi	r17, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+  50:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+  52:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+  54:	ec ef       	ldi	r30, 0xFC	; 252
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+  56:	f9 e0       	ldi	r31, 0x09	; 9
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2415
+  58:	02 c0       	rjmp	.+4      	; 0x5e <__do_copy_data+0x10>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2418
+  5a:	05 90       	lpm	r0, Z+
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2423
+  5c:	0d 92       	st	X+, r0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+  5e:	a8 38       	cpi	r26, 0x88	; 136
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+  60:	b1 07       	cpc	r27, r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2427
+  62:	d9 f7       	brne	.-10     	; 0x5a <__do_copy_data+0xc>
+
+00000064 <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+  64:	20 e0       	ldi	r18, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+  66:	a8 e8       	ldi	r26, 0x88	; 136
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+  68:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2445
+  6a:	01 c0       	rjmp	.+2      	; 0x6e <.do_clear_bss_start>
+
+0000006c <.do_clear_bss_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2447
+  6c:	1d 92       	st	X+, r1
+
+0000006e <.do_clear_bss_start>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+  6e:	a4 3c       	cpi	r26, 0xC4	; 196
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+  70:	b2 07       	cpc	r27, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2451
+  72:	e1 f7       	brne	.-8      	; 0x6c <.do_clear_bss_loop>
+.do_clear_bss_start():
+  74:	37 d4       	rcall	.+2158   	; 0x8e4 <main>
+  76:	c0 c4       	rjmp	.+2432   	; 0x9f8 <_exit>
+
+00000078 <__bad_interrupt>:
+__vector_1():
+  78:	c3 cf       	rjmp	.-122    	; 0x0 <__vectors>
+
+0000007a <buttonInterrupt()>:
+_Z15buttonInterruptv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:17
+
+
+//Called any time the pin changes state
+void buttonInterrupt()
+{
+  if (digitalRead(Button_Pin) == LOW) //User has released the button, we have completed a click cycle
+  7a:	81 e0       	ldi	r24, 0x01	; 1
+  7c:	f8 d3       	rcall	.+2032   	; 0x86e <digitalRead>
+  7e:	89 2b       	or	r24, r25
+  80:	19 f4       	brne	.+6      	; 0x88 <buttonInterrupt()+0xe>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:19
+  {
+    registerMap.Button_Status = 1; //Set the clicked bit
+  82:	81 e0       	ldi	r24, 0x01	; 1
+  84:	80 93 77 00 	sts	0x0077, r24	; 0x800077 <registerMap+0x8>
+  88:	08 95       	ret
+
+0000008a <loop>:
+loop():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:202
+//  delay(200);
+#endif
+
+  //Sleep until interrupt
+  //set_sleep_mode(SLEEP_MODE_IDLE);
+  sleep_mode(); //Stop everything and go to sleep. Wake up from Button interrupts.
+  8a:	85 b7       	in	r24, 0x35	; 53
+  8c:	80 62       	ori	r24, 0x20	; 32
+  8e:	85 bf       	out	0x35, r24	; 53
+  90:	88 95       	sleep
+  92:	85 b7       	in	r24, 0x35	; 53
+  94:	8f 7d       	andi	r24, 0xDF	; 223
+  96:	85 bf       	out	0x35, r24	; 53
+  98:	08 95       	ret
+
+0000009a <readSystemSettings()>:
+_ZNK5EERefdeEv():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\EEPROM/EEPROM.h:42
+
+    EERef( const int index )
+        : index( index )                 {}
+    
+    //Access/read members.
+    uint8_t operator*() const            { return eeprom_read_byte( (uint8_t*) index ); }
+  9a:	80 e0       	ldi	r24, 0x00	; 0
+  9c:	90 e0       	ldi	r25, 0x00	; 0
+  9e:	96 d4       	rcall	.+2348   	; 0x9cc <eeprom_read_byte>
+_Z18readSystemSettingsv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:243
+//Reads the current system settings from EEPROM
+//If anything looks weird, reset setting to default value
+void readSystemSettings(void)
+{
+  //Read what I2C address we should use
+  registerMap.i2cAddress = EEPROM.read(LOCATION_I2C_ADDRESS);
+  a0:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <registerMap+0xa>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:246
+
+  //Error check I2C address we read from EEPROM
+  if (registerMap.i2cAddress < 0x08 || registerMap.i2cAddress > 0x77)
+  a4:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <registerMap+0xa>
+  a8:	88 30       	cpi	r24, 0x08	; 8
+  aa:	20 f0       	brcs	.+8      	; 0xb4 <readSystemSettings()+0x1a>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:246 (discriminator 2)
+  ac:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <registerMap+0xa>
+  b0:	88 37       	cpi	r24, 0x78	; 120
+  b2:	40 f0       	brcs	.+16     	; 0xc4 <readSystemSettings()+0x2a>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:250
+  {
+    //User has set the address out of range
+    //Go back to defaults
+    registerMap.i2cAddress = I2C_ADDRESS_DEFAULT;
+  b4:	80 e2       	ldi	r24, 0x20	; 32
+  b6:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <registerMap+0xa>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:251
+    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+  ba:	60 91 79 00 	lds	r22, 0x0079	; 0x800079 <registerMap+0xa>
+_ZN5EERefaSEh():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\EEPROM/EEPROM.h:47
+    operator uint8_t() const       { return **this; }
+    
+    //Assignment/write members.
+    EERef &operator=( const EERef &ref ) { return *this = *ref; }
+    EERef &operator=( uint8_t in )       { return eeprom_write_byte( (uint8_t*) index, in ), *this;  }
+  be:	80 e0       	ldi	r24, 0x00	; 0
+  c0:	90 e0       	ldi	r25, 0x00	; 0
+  c2:	8c c4       	rjmp	.+2328   	; 0x9dc <eeprom_write_byte>
+  c4:	08 95       	ret
+
+000000c6 <turnOffExtraBits()>:
+_Z16turnOffExtraBitsv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:265
+//  MCUCR = bit (BODS) | bit (BODSE);
+//  MCUCR = bit (BODS);
+
+  //Power down various bits of hardware to lower power usage
+  //set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  set_sleep_mode(SLEEP_MODE_IDLE);
+  c6:	85 b7       	in	r24, 0x35	; 53
+  c8:	87 7e       	andi	r24, 0xE7	; 231
+  ca:	85 bf       	out	0x35, r24	; 53
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:266
+  sleep_enable();
+  cc:	85 b7       	in	r24, 0x35	; 53
+  ce:	80 62       	ori	r24, 0x20	; 32
+  d0:	85 bf       	out	0x35, r24	; 53
+  d2:	08 95       	ret
+
+000000d4 <startI2C()>:
+_Z8startI2Cv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:273
+
+
+//Begin listening on I2C bus as I2C slave using the global variable setting_i2c_address
+void startI2C()
+{
+  Wire.end(); //Before we can change addresses we need to stop
+  d4:	89 e8       	ldi	r24, 0x89	; 137
+  d6:	90 e0       	ldi	r25, 0x00	; 0
+  d8:	f3 d0       	rcall	.+486    	; 0x2c0 <TwoWire::end()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:275
+
+  Wire.begin(registerMap.i2cAddress); //Start I2C and answer calls using address from EEPROM
+  da:	60 91 79 00 	lds	r22, 0x0079	; 0x800079 <registerMap+0xa>
+  de:	89 e8       	ldi	r24, 0x89	; 137
+  e0:	90 e0       	ldi	r25, 0x00	; 0
+  e2:	ec d0       	rcall	.+472    	; 0x2bc <TwoWire::begin(unsigned char)>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:278
+
+  //The connections to the interrupts are severed when a Wire.begin occurs. So re-declare them.
+  Wire.onReceive(receiveEvent);
+  e4:	6c e9       	ldi	r22, 0x9C	; 156
+  e6:	70 e0       	ldi	r23, 0x00	; 0
+  e8:	89 e8       	ldi	r24, 0x89	; 137
+  ea:	90 e0       	ldi	r25, 0x00	; 0
+  ec:	5b d1       	rcall	.+694    	; 0x3a4 <TwoWire::onReceive(void (*)(int))>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:279
+  Wire.onRequest(requestEvent);
+  ee:	68 e4       	ldi	r22, 0x48	; 72
+  f0:	71 e0       	ldi	r23, 0x01	; 1
+  f2:	89 e8       	ldi	r24, 0x89	; 137
+  f4:	90 e0       	ldi	r25, 0x00	; 0
+  f6:	5b c1       	rjmp	.+694    	; 0x3ae <TwoWire::onRequest(void (*)())>
+
+000000f8 <recordSystemSettings()>:
+_Z20recordSystemSettingsv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:214
+  byte i2cAddr;
+
+  //TinySerial.println("Set Registers"); //Debug message
+
+  //Error check the current I2C address
+  if (registerMap.i2cAddress < 0x08 || registerMap.i2cAddress > 0x77)
+  f8:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <registerMap+0xa>
+  fc:	88 30       	cpi	r24, 0x08	; 8
+  fe:	b8 f0       	brcs	.+46     	; 0x12e <recordSystemSettings()+0x36>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:214 (discriminator 2)
+ 100:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <registerMap+0xa>
+ 104:	88 37       	cpi	r24, 0x78	; 120
+ 106:	98 f4       	brcc	.+38     	; 0x12e <recordSystemSettings()+0x36>
+_ZNK5EERefdeEv():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\EEPROM/EEPROM.h:42
+
+    EERef( const int index )
+        : index( index )                 {}
+    
+    //Access/read members.
+    uint8_t operator*() const            { return eeprom_read_byte( (uint8_t*) index ); }
+ 108:	80 e0       	ldi	r24, 0x00	; 0
+ 10a:	90 e0       	ldi	r25, 0x00	; 0
+ 10c:	5f d4       	rcall	.+2238   	; 0x9cc <eeprom_read_byte>
+_Z20recordSystemSettingsv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:226
+  //TinySerial.println("  Check value is in range"); //Debug message
+
+  
+  //Read the value currently in EEPROM. If it's different from the memory map then record the memory map value to EEPROM.
+  EEPROM.get(LOCATION_I2C_ADDRESS, i2cAddr);
+  if (i2cAddr != registerMap.i2cAddress && registerMap.i2cLock == 0x13)
+ 10e:	90 91 79 00 	lds	r25, 0x0079	; 0x800079 <registerMap+0xa>
+ 112:	98 17       	cp	r25, r24
+ 114:	81 f0       	breq	.+32     	; 0x136 <recordSystemSettings()+0x3e>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:226 (discriminator 1)
+ 116:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <registerMap+0x9>
+ 11a:	83 31       	cpi	r24, 0x13	; 19
+ 11c:	61 f4       	brne	.+24     	; 0x136 <recordSystemSettings()+0x3e>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:229
+  {    
+    //TinySerial.print(registerMap.i2cLock, HEX); //Debug message
+    registerMap.i2cLock = 0x00;
+ 11e:	10 92 78 00 	sts	0x0078, r1	; 0x800078 <registerMap+0x9>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:231
+    //TinySerial.println(registerMap.i2cLock, HEX); //Debug message
+    EEPROM.write(LOCATION_I2C_ADDRESS, registerMap.i2cAddress);
+ 122:	60 91 79 00 	lds	r22, 0x0079	; 0x800079 <registerMap+0xa>
+_ZN5EERefaSEh():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\EEPROM/EEPROM.h:47
+    operator uint8_t() const       { return **this; }
+    
+    //Assignment/write members.
+    EERef &operator=( const EERef &ref ) { return *this = *ref; }
+    EERef &operator=( uint8_t in )       { return eeprom_write_byte( (uint8_t*) index, in ), *this;  }
+ 126:	80 e0       	ldi	r24, 0x00	; 0
+ 128:	90 e0       	ldi	r25, 0x00	; 0
+ 12a:	58 d4       	rcall	.+2224   	; 0x9dc <eeprom_write_byte>
+_Z20recordSystemSettingsv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:232
+    startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
+ 12c:	d3 cf       	rjmp	.-90     	; 0xd4 <startI2C()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:218
+  //Error check the current I2C address
+  if (registerMap.i2cAddress < 0x08 || registerMap.i2cAddress > 0x77)
+  {
+    //User has set the address out of range
+    //Go back to defaults
+    registerMap.i2cAddress = I2C_ADDRESS_DEFAULT;
+ 12e:	80 e2       	ldi	r24, 0x20	; 32
+ 130:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <registerMap+0xa>
+ 134:	e9 cf       	rjmp	.-46     	; 0x108 <recordSystemSettings()+0x10>
+ 136:	08 95       	ret
+
+00000138 <receiveEvent(int)>:
+_Z12receiveEventi():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:65
+
+
+//When Qwiic Joystick receives data bytes from Master, this function is called as an interrupt
+//(Serves rewritable I2C address)
+void receiveEvent(int numberOfBytesReceived)
+{
+ 138:	ff 92       	push	r15
+ 13a:	0f 93       	push	r16
+ 13c:	1f 93       	push	r17
+ 13e:	cf 93       	push	r28
+ 140:	df 93       	push	r29
+ 142:	8c 01       	movw	r16, r24
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:67
+  //TinySerial.println("Start RX Event"); //Debug message
+  registerNumber = Wire.read(); //Get the memory map offset from the user
+ 144:	89 e8       	ldi	r24, 0x89	; 137
+ 146:	90 e0       	ldi	r25, 0x00	; 0
+ 148:	12 d1       	rcall	.+548    	; 0x36e <TwoWire::read()>
+ 14a:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__data_end>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:74
+
+  
+
+  //Begin recording the following incoming bytes to the temp memory map
+  //starting at the registerNumber (the first byte received)
+  for (byte x = 0 ; x < numberOfBytesReceived - 1 ; x++)
+ 14e:	f1 2c       	mov	r15, r1
+ 150:	01 50       	subi	r16, 0x01	; 1
+ 152:	11 09       	sbc	r17, r1
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:74 (discriminator 1)
+ 154:	cf 2d       	mov	r28, r15
+ 156:	d0 e0       	ldi	r29, 0x00	; 0
+ 158:	c0 17       	cp	r28, r16
+ 15a:	d1 07       	cpc	r29, r17
+ 15c:	0c f0       	brlt	.+2      	; 0x160 <receiveEvent(int)+0x28>
+ 15e:	41 c0       	rjmp	.+130    	; 0x1e2 <receiveEvent(int)+0xaa>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:76
+  {
+    byte temp = Wire.read(); //We might record it, we might throw it away
+ 160:	89 e8       	ldi	r24, 0x89	; 137
+ 162:	90 e0       	ldi	r25, 0x00	; 0
+ 164:	04 d1       	rcall	.+520    	; 0x36e <TwoWire::read()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:78
+
+    if ( (x + registerNumber) < sizeof(memoryMap))
+ 166:	90 91 88 00 	lds	r25, 0x0088	; 0x800088 <__data_end>
+ 16a:	9e 01       	movw	r18, r28
+ 16c:	29 0f       	add	r18, r25
+ 16e:	31 1d       	adc	r19, r1
+ 170:	2b 30       	cpi	r18, 0x0B	; 11
+ 172:	31 05       	cpc	r19, r1
+ 174:	a0 f5       	brcc	.+104    	; 0x1de <receiveEvent(int)+0xa6>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:82
+    {
+      //Clense the incoming byte against the read only protected bits
+      //Store the result into the register map
+      *(registerPointer + registerNumber + x) &= ~*(protectionPointer + registerNumber + x); //Clear this register if needed
+ 176:	90 91 88 00 	lds	r25, 0x0088	; 0x800088 <__data_end>
+ 17a:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__data_end>
+ 17e:	ae 01       	movw	r20, r28
+ 180:	42 0f       	add	r20, r18
+ 182:	51 1d       	adc	r21, r1
+ 184:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <registerPointer>
+ 188:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <registerPointer+0x1>
+ 18c:	a4 0f       	add	r26, r20
+ 18e:	b5 1f       	adc	r27, r21
+ 190:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__data_start>
+ 194:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <__data_start+0x1>
+ 198:	ec 0f       	add	r30, r28
+ 19a:	fd 1f       	adc	r31, r29
+ 19c:	e9 0f       	add	r30, r25
+ 19e:	f1 1d       	adc	r31, r1
+ 1a0:	90 81       	ld	r25, Z
+ 1a2:	90 95       	com	r25
+ 1a4:	2c 91       	ld	r18, X
+ 1a6:	92 23       	and	r25, r18
+ 1a8:	9c 93       	st	X, r25
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:83
+      *(registerPointer + registerNumber + x) |= temp & *(protectionPointer + registerNumber + x); //Or in the user's request (clensed against protection bits)
+ 1aa:	90 91 88 00 	lds	r25, 0x0088	; 0x800088 <__data_end>
+ 1ae:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__data_end>
+ 1b2:	ae 01       	movw	r20, r28
+ 1b4:	42 0f       	add	r20, r18
+ 1b6:	51 1d       	adc	r21, r1
+ 1b8:	e0 91 62 00 	lds	r30, 0x0062	; 0x800062 <registerPointer>
+ 1bc:	f0 91 63 00 	lds	r31, 0x0063	; 0x800063 <registerPointer+0x1>
+ 1c0:	e4 0f       	add	r30, r20
+ 1c2:	f5 1f       	adc	r31, r21
+ 1c4:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__data_start>
+ 1c8:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <__data_start+0x1>
+ 1cc:	c2 0f       	add	r28, r18
+ 1ce:	d3 1f       	adc	r29, r19
+ 1d0:	c9 0f       	add	r28, r25
+ 1d2:	d1 1d       	adc	r29, r1
+ 1d4:	98 81       	ld	r25, Y
+ 1d6:	89 23       	and	r24, r25
+ 1d8:	90 81       	ld	r25, Z
+ 1da:	98 2b       	or	r25, r24
+ 1dc:	90 83       	st	Z, r25
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:74 (discriminator 2)
+
+  
+
+  //Begin recording the following incoming bytes to the temp memory map
+  //starting at the registerNumber (the first byte received)
+  for (byte x = 0 ; x < numberOfBytesReceived - 1 ; x++)
+ 1de:	f3 94       	inc	r15
+ 1e0:	b9 cf       	rjmp	.-142    	; 0x154 <receiveEvent(int)+0x1c>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:89
+    }
+  }
+  //TinySerial.println("  Read 4 Data"); //Debug message
+  recordSystemSettings();
+  //TinySerial.println("  Data Saved"); //Debug message
+}
+ 1e2:	df 91       	pop	r29
+ 1e4:	cf 91       	pop	r28
+ 1e6:	1f 91       	pop	r17
+ 1e8:	0f 91       	pop	r16
+ 1ea:	ff 90       	pop	r15
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:87
+      *(registerPointer + registerNumber + x) &= ~*(protectionPointer + registerNumber + x); //Clear this register if needed
+      *(registerPointer + registerNumber + x) |= temp & *(protectionPointer + registerNumber + x); //Or in the user's request (clensed against protection bits)
+    }
+  }
+  //TinySerial.println("  Read 4 Data"); //Debug message
+  recordSystemSettings();
+ 1ec:	85 cf       	rjmp	.-246    	; 0xf8 <recordSystemSettings()>
+
+000001ee <setupInterrupts()>:
+_Z15setupInterruptsv():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.h:434
+		if (pcintNum == 0)
+			callbackPCINT0 = userFunc;
+#endif
+#if (PCINT_USE_PCINT1 == true)
+		if (pcintNum == 1)
+			callbackPCINT1 = userFunc;
+ 1ee:	8d e3       	ldi	r24, 0x3D	; 61
+ 1f0:	90 e0       	ldi	r25, 0x00	; 0
+ 1f2:	90 93 85 00 	sts	0x0085, r25	; 0x800085 <callbackPCINT1+0x1>
+ 1f6:	80 93 84 00 	sts	0x0084, r24	; 0x800084 <callbackPCINT1>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.h:600
+	uint8_t pcintMask = (1 << pcintBit);
+	uint8_t arrayPos = getArrayPosPCINT(pcintPort);
+
+	// save settings related to mode and registers
+	if (mode == CHANGE || mode == RISING)
+		risingPorts[arrayPos] |= pcintMask;
+ 1fa:	80 91 97 00 	lds	r24, 0x0097	; 0x800097 <risingPorts>
+ 1fe:	82 60       	ori	r24, 0x02	; 2
+ 200:	80 93 97 00 	sts	0x0097, r24	; 0x800097 <risingPorts>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.h:602
+	if (mode == CHANGE || mode == FALLING)
+		fallingPorts[arrayPos] |= pcintMask;
+ 204:	80 91 98 00 	lds	r24, 0x0098	; 0x800098 <fallingPorts>
+ 208:	82 60       	ori	r24, 0x02	; 2
+ 20a:	80 93 98 00 	sts	0x0098, r24	; 0x800098 <fallingPorts>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.h:605
+
+	// call the actual hardware attach function
+	enablePinChangeInterruptHelper(pcintPort, pcintMask, arrayPos);
+ 20e:	40 e0       	ldi	r20, 0x00	; 0
+ 210:	62 e0       	ldi	r22, 0x02	; 2
+ 212:	80 e0       	ldi	r24, 0x00	; 0
+ 214:	83 c2       	rjmp	.+1286   	; 0x71c <enablePinChangeInterruptHelper(unsigned char, unsigned char, unsigned char)>
+
+00000216 <setup>:
+setup():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:116
+
+
+void setup(void)
+{
+  //Pin Definitions
+  pinMode(Button_Pin, INPUT_PULLUP);
+ 216:	62 e0       	ldi	r22, 0x02	; 2
+ 218:	81 e0       	ldi	r24, 0x01	; 1
+ 21a:	da d2       	rcall	.+1460   	; 0x7d0 <pinMode>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:117
+  pinMode(Vertical_Pin, INPUT); //No pull-up. External 10k
+ 21c:	60 e0       	ldi	r22, 0x00	; 0
+ 21e:	83 e0       	ldi	r24, 0x03	; 3
+ 220:	d7 d2       	rcall	.+1454   	; 0x7d0 <pinMode>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:118
+  pinMode(Horizontal_Pin, INPUT); //No pull-up. External 10k
+ 222:	60 e0       	ldi	r22, 0x00	; 0
+ 224:	82 e0       	ldi	r24, 0x02	; 2
+ 226:	d4 d2       	rcall	.+1448   	; 0x7d0 <pinMode>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:120
+
+  turnOffExtraBits(); //Turn off all unused peripherals
+ 228:	4e df       	rcall	.-356    	; 0xc6 <turnOffExtraBits()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:121
+  readSystemSettings(); //Load all system settings from EEPROM
+ 22a:	37 df       	rcall	.-402    	; 0x9a <readSystemSettings()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:122
+  setupInterrupts(); //Enable pin change interrupts for I2C and button
+ 22c:	e0 df       	rcall	.-64     	; 0x1ee <setupInterrupts()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/Qwiic_Joystick_v26.ino:123
+  startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
+ 22e:	52 cf       	rjmp	.-348    	; 0xd4 <startI2C()>
+
+00000230 <updateJoystick()>:
+_Z14updateJoystickv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:25
+  }
+}
+
+
+//Called every time the joystick is moved
+void updateJoystick() {
+ 230:	0f 93       	push	r16
+ 232:	1f 93       	push	r17
+ 234:	cf 93       	push	r28
+ 236:	df 93       	push	r29
+ 238:	00 d0       	rcall	.+0      	; 0x23a <updateJoystick()+0xa>
+ 23a:	00 d0       	rcall	.+0      	; 0x23c <updateJoystick()+0xc>
+ 23c:	cd b7       	in	r28, 0x3d	; 61
+ 23e:	de b7       	in	r29, 0x3e	; 62
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:27
+  //Bring up ADC
+  ADCSRA |= (1 << ADEN);
+ 240:	37 9a       	sbi	0x06, 7	; 6
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:29
+
+  int X_Pot = analogRead(Horizontal_Pin);
+ 242:	82 e0       	ldi	r24, 0x02	; 2
+ 244:	83 d2       	rcall	.+1286   	; 0x74c <analogRead>
+ 246:	8c 01       	movw	r16, r24
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:30
+  int Y_Pot = analogRead(Vertical_Pin);
+ 248:	83 e0       	ldi	r24, 0x03	; 3
+ 24a:	80 d2       	rcall	.+1280   	; 0x74c <analogRead>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:37
+  //Convert int value to a 16-bit integer by bitshitting it left by 6.
+  //Example-
+  //DEC:           630
+  //BIN:           1001110110
+  //Bitshift by 6: 1001110110000000
+  uint16_t X_unit16 = X_Pot<<6;
+ 24c:	26 e0       	ldi	r18, 0x06	; 6
+ 24e:	00 0f       	add	r16, r16
+ 250:	11 1f       	adc	r17, r17
+ 252:	2a 95       	dec	r18
+ 254:	e1 f7       	brne	.-8      	; 0x24e <updateJoystick()+0x1e>
+ 256:	1c 83       	std	Y+4, r17	; 0x04
+ 258:	0b 83       	std	Y+3, r16	; 0x03
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:38
+  uint16_t Y_unit16 = Y_Pot<<6;
+ 25a:	36 e0       	ldi	r19, 0x06	; 6
+ 25c:	88 0f       	add	r24, r24
+ 25e:	99 1f       	adc	r25, r25
+ 260:	3a 95       	dec	r19
+ 262:	e1 f7       	brne	.-8      	; 0x25c <updateJoystick()+0x2c>
+ 264:	9a 83       	std	Y+2, r25	; 0x02
+ 266:	89 83       	std	Y+1, r24	; 0x01
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:50
+  //Split:          10011101 | 10000000
+
+  byte * bytePointer;
+
+  bytePointer = (byte*)&X_unit16;
+  registerMap.X_MSB = bytePointer[1];
+ 268:	8c 81       	ldd	r24, Y+4	; 0x04
+ 26a:	ef e6       	ldi	r30, 0x6F	; 111
+ 26c:	f0 e0       	ldi	r31, 0x00	; 0
+ 26e:	83 83       	std	Z+3, r24	; 0x03
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:51
+  registerMap.X_LSB = bytePointer[0];
+ 270:	8b 81       	ldd	r24, Y+3	; 0x03
+ 272:	84 83       	std	Z+4, r24	; 0x04
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:54
+  
+  bytePointer = (byte*)&Y_unit16;
+  registerMap.Y_MSB = bytePointer[1];
+ 274:	8a 81       	ldd	r24, Y+2	; 0x02
+ 276:	85 83       	std	Z+5, r24	; 0x05
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:55
+  registerMap.Y_LSB = bytePointer[0];
+ 278:	89 81       	ldd	r24, Y+1	; 0x01
+ 27a:	86 83       	std	Z+6, r24	; 0x06
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:58
+
+  //Shut off ADC
+  ADCSRA &= ~(1 << ADEN);
+ 27c:	37 98       	cbi	0x06, 7	; 6
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:59
+}
+ 27e:	0f 90       	pop	r0
+ 280:	0f 90       	pop	r0
+ 282:	0f 90       	pop	r0
+ 284:	0f 90       	pop	r0
+ 286:	df 91       	pop	r29
+ 288:	cf 91       	pop	r28
+ 28a:	1f 91       	pop	r17
+ 28c:	0f 91       	pop	r16
+ 28e:	08 95       	ret
+
+00000290 <requestEvent()>:
+_Z12requestEventv():
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:98
+//When Qwiic Joystick gets a request for data from the user, this function is called as an interrupt
+//The interrupt will respond with bytes starting from the last byte the user sent to us
+//While we are sending bytes we may have to do some calculations
+void requestEvent()
+{
+  updateJoystick();
+ 290:	cf df       	rcall	.-98     	; 0x230 <updateJoystick()>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:99
+  registerMap.Button_State = digitalRead(Button_Pin);
+ 292:	81 e0       	ldi	r24, 0x01	; 1
+ 294:	ec d2       	rcall	.+1496   	; 0x86e <digitalRead>
+ 296:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <registerMap+0x7>
+C:\Users\wesley.furuya\Downloads\Qwiic_Joystick-master\Qwiic_Joystick-master\Firmware\ATtiny85 Firmware\Qwiic_Joystick_v26/interrupts.ino:104
+
+  //This will write the entire contents of the register map struct starting from
+  //the register the user requested, and when it reaches the end the master
+  //will read 0xFFs.
+  Wire.write((registerPointer + registerNumber), sizeof(memoryMap) - registerNumber);
+ 29a:	90 91 88 00 	lds	r25, 0x0088	; 0x800088 <__data_end>
+ 29e:	80 91 88 00 	lds	r24, 0x0088	; 0x800088 <__data_end>
+ 2a2:	4b e0       	ldi	r20, 0x0B	; 11
+ 2a4:	50 e0       	ldi	r21, 0x00	; 0
+ 2a6:	49 1b       	sub	r20, r25
+ 2a8:	51 09       	sbc	r21, r1
+ 2aa:	60 91 62 00 	lds	r22, 0x0062	; 0x800062 <registerPointer>
+ 2ae:	70 91 63 00 	lds	r23, 0x0063	; 0x800063 <registerPointer+0x1>
+ 2b2:	68 0f       	add	r22, r24
+ 2b4:	71 1d       	adc	r23, r1
+ 2b6:	89 e8       	ldi	r24, 0x89	; 137
+ 2b8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ba:	2a c0       	rjmp	.+84     	; 0x310 <TwoWire::write(unsigned char const*, unsigned int)>
+
+000002bc <TwoWire::begin(unsigned char)>:
+_ZN7TwoWire5beginEh():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src/Wire.cpp:585
+  }
+
+  return value;
+}
+
+void TwoWire::flush(void) {
+ 2bc:	86 2f       	mov	r24, r22
+ 2be:	85 c0       	rjmp	.+266    	; 0x3ca <USI_TWI_Slave_Initialise>
+
+000002c0 <TwoWire::end()>:
+_ZN7TwoWire3endEv():
+ 2c0:	9b c0       	rjmp	.+310    	; 0x3f8 <USI_TWI_Slave_Disable>
+
+000002c2 <TwoWire::write(unsigned char)>:
+_ZN7TwoWire5writeEh():
+ 2c2:	cf 93       	push	r28
+ 2c4:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <TwoWire::transmitting>
+ 2c8:	88 23       	and	r24, r24
+ 2ca:	c1 f0       	breq	.+48     	; 0x2fc <TwoWire::write(unsigned char)+0x3a>
+ 2cc:	80 91 8b 00 	lds	r24, 0x008B	; 0x80008b <TwoWire::BufferLength>
+ 2d0:	80 32       	cpi	r24, 0x20	; 32
+ 2d2:	18 f0       	brcs	.+6      	; 0x2da <TwoWire::write(unsigned char)+0x18>
+ 2d4:	80 e0       	ldi	r24, 0x00	; 0
+ 2d6:	90 e0       	ldi	r25, 0x00	; 0
+ 2d8:	19 c0       	rjmp	.+50     	; 0x30c <TwoWire::write(unsigned char)+0x4a>
+ 2da:	80 91 8c 00 	lds	r24, 0x008C	; 0x80008c <TwoWire::BufferIndex>
+ 2de:	e0 91 7a 00 	lds	r30, 0x007A	; 0x80007a <TwoWire::Buffer>
+ 2e2:	f0 91 7b 00 	lds	r31, 0x007B	; 0x80007b <TwoWire::Buffer+0x1>
+ 2e6:	e8 0f       	add	r30, r24
+ 2e8:	f1 1d       	adc	r31, r1
+ 2ea:	60 83       	st	Z, r22
+ 2ec:	80 91 8c 00 	lds	r24, 0x008C	; 0x80008c <TwoWire::BufferIndex>
+ 2f0:	8f 5f       	subi	r24, 0xFF	; 255
+ 2f2:	80 93 8c 00 	sts	0x008C, r24	; 0x80008c <TwoWire::BufferIndex>
+ 2f6:	80 93 8b 00 	sts	0x008B, r24	; 0x80008b <TwoWire::BufferLength>
+ 2fa:	06 c0       	rjmp	.+12     	; 0x308 <TwoWire::write(unsigned char)+0x46>
+ 2fc:	c6 2f       	mov	r28, r22
+ 2fe:	aa d0       	rcall	.+340    	; 0x454 <USI_TWI_Space_In_Transmission_Buffer>
+ 300:	88 23       	and	r24, r24
+ 302:	41 f3       	breq	.-48     	; 0x2d4 <TwoWire::write(unsigned char)+0x12>
+ 304:	8c 2f       	mov	r24, r28
+ 306:	7e d0       	rcall	.+252    	; 0x404 <USI_TWI_Transmit_Byte>
+ 308:	81 e0       	ldi	r24, 0x01	; 1
+ 30a:	90 e0       	ldi	r25, 0x00	; 0
+ 30c:	cf 91       	pop	r28
+ 30e:	08 95       	ret
+
+00000310 <TwoWire::write(unsigned char const*, unsigned int)>:
+_ZN7TwoWire5writeEPKhj():
+ 310:	cf 92       	push	r12
+ 312:	df 92       	push	r13
+ 314:	ef 92       	push	r14
+ 316:	ff 92       	push	r15
+ 318:	0f 93       	push	r16
+ 31a:	1f 93       	push	r17
+ 31c:	cf 93       	push	r28
+ 31e:	df 93       	push	r29
+ 320:	6c 01       	movw	r12, r24
+ 322:	eb 01       	movw	r28, r22
+ 324:	7b 01       	movw	r14, r22
+ 326:	e4 0e       	add	r14, r20
+ 328:	f5 1e       	adc	r15, r21
+ 32a:	00 e0       	ldi	r16, 0x00	; 0
+ 32c:	10 e0       	ldi	r17, 0x00	; 0
+ 32e:	ce 15       	cp	r28, r14
+ 330:	df 05       	cpc	r29, r15
+ 332:	31 f0       	breq	.+12     	; 0x340 <TwoWire::write(unsigned char const*, unsigned int)+0x30>
+ 334:	69 91       	ld	r22, Y+
+ 336:	c6 01       	movw	r24, r12
+ 338:	c4 df       	rcall	.-120    	; 0x2c2 <TwoWire::write(unsigned char)>
+ 33a:	08 0f       	add	r16, r24
+ 33c:	19 1f       	adc	r17, r25
+ 33e:	f7 cf       	rjmp	.-18     	; 0x32e <TwoWire::write(unsigned char const*, unsigned int)+0x1e>
+ 340:	c8 01       	movw	r24, r16
+ 342:	df 91       	pop	r29
+ 344:	cf 91       	pop	r28
+ 346:	1f 91       	pop	r17
+ 348:	0f 91       	pop	r16
+ 34a:	ff 90       	pop	r15
+ 34c:	ef 90       	pop	r14
+ 34e:	df 90       	pop	r13
+ 350:	cf 90       	pop	r12
+ 352:	08 95       	ret
+
+00000354 <TwoWire::available()>:
+_ZN7TwoWire9availableEv():
+ 354:	80 91 8b 00 	lds	r24, 0x008B	; 0x80008b <TwoWire::BufferLength>
+ 358:	88 23       	and	r24, r24
+ 35a:	31 f0       	breq	.+12     	; 0x368 <TwoWire::available()+0x14>
+ 35c:	90 e0       	ldi	r25, 0x00	; 0
+ 35e:	20 91 8c 00 	lds	r18, 0x008C	; 0x80008c <TwoWire::BufferIndex>
+ 362:	82 1b       	sub	r24, r18
+ 364:	91 09       	sbc	r25, r1
+ 366:	08 95       	ret
+ 368:	6e d0       	rcall	.+220    	; 0x446 <USI_TWI_Data_In_Receive_Buffer>
+ 36a:	90 e0       	ldi	r25, 0x00	; 0
+ 36c:	08 95       	ret
+
+0000036e <TwoWire::read()>:
+_ZN7TwoWire4readEv():
+ 36e:	f2 df       	rcall	.-28     	; 0x354 <TwoWire::available()>
+ 370:	89 2b       	or	r24, r25
+ 372:	a9 f0       	breq	.+42     	; 0x39e <TwoWire::read()+0x30>
+ 374:	80 91 8b 00 	lds	r24, 0x008B	; 0x80008b <TwoWire::BufferLength>
+ 378:	88 23       	and	r24, r24
+ 37a:	71 f0       	breq	.+28     	; 0x398 <TwoWire::read()+0x2a>
+ 37c:	20 91 8c 00 	lds	r18, 0x008C	; 0x80008c <TwoWire::BufferIndex>
+ 380:	e0 91 7a 00 	lds	r30, 0x007A	; 0x80007a <TwoWire::Buffer>
+ 384:	f0 91 7b 00 	lds	r31, 0x007B	; 0x80007b <TwoWire::Buffer+0x1>
+ 388:	e2 0f       	add	r30, r18
+ 38a:	f1 1d       	adc	r31, r1
+ 38c:	80 81       	ld	r24, Z
+ 38e:	90 e0       	ldi	r25, 0x00	; 0
+ 390:	2f 5f       	subi	r18, 0xFF	; 255
+ 392:	20 93 8c 00 	sts	0x008C, r18	; 0x80008c <TwoWire::BufferIndex>
+ 396:	08 95       	ret
+ 398:	45 d0       	rcall	.+138    	; 0x424 <USI_TWI_Receive_Byte>
+ 39a:	90 e0       	ldi	r25, 0x00	; 0
+ 39c:	08 95       	ret
+ 39e:	8f ef       	ldi	r24, 0xFF	; 255
+ 3a0:	9f ef       	ldi	r25, 0xFF	; 255
+ 3a2:	08 95       	ret
+
+000003a4 <TwoWire::onReceive(void (*)(int))>:
+_ZN7TwoWire9onReceiveEPFviE():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src/Wire.cpp:591
+  // XXX: to be implemented.
+}
+
+// sets function called on slave write
+void TwoWire::onReceive( void (*function)(int) ) {
+  USI_TWI_On_Slave_Receive = function;
+ 3a4:	70 93 8e 00 	sts	0x008E, r23	; 0x80008e <USI_TWI_On_Slave_Receive+0x1>
+ 3a8:	60 93 8d 00 	sts	0x008D, r22	; 0x80008d <USI_TWI_On_Slave_Receive>
+ 3ac:	08 95       	ret
+
+000003ae <TwoWire::onRequest(void (*)())>:
+_ZN7TwoWire9onRequestEPFvvE():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src/Wire.cpp:596
+}
+
+// sets function called on slave read
+void TwoWire::onRequest( void (*function)(void) ) {
+  USI_TWI_On_Slave_Transmit = function;
+ 3ae:	70 93 90 00 	sts	0x0090, r23	; 0x800090 <USI_TWI_On_Slave_Transmit+0x1>
+ 3b2:	60 93 8f 00 	sts	0x008F, r22	; 0x80008f <USI_TWI_On_Slave_Transmit>
+ 3b6:	08 95       	ret
+
+000003b8 <Flush_TWI_Buffers>:
+Flush_TWI_Buffers():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:153
+// Check if there is an active data session.
+unsigned char USI_TWI_Slave_Is_Active()
+{
+	// Active if Overflow Interrupt is enabled and no Stop Condition occurred
+	return (USICR & (1 << USIOIE)) && ((USISR & (1 << USIPF)) == 0);
+}
+ 3b8:	10 92 93 00 	sts	0x0093, r1	; 0x800093 <TWI_RxTail>
+ 3bc:	10 92 94 00 	sts	0x0094, r1	; 0x800094 <TWI_RxHead>
+ 3c0:	10 92 91 00 	sts	0x0091, r1	; 0x800091 <TWI_TxTail>
+ 3c4:	10 92 92 00 	sts	0x0092, r1	; 0x800092 <TWI_TxHead>
+ 3c8:	08 95       	ret
+
+000003ca <USI_TWI_Slave_Initialise>:
+USI_TWI_Slave_Initialise():
+ 3ca:	cf 93       	push	r28
+ 3cc:	c8 2f       	mov	r28, r24
+ 3ce:	f4 df       	rcall	.-24     	; 0x3b8 <Flush_TWI_Buffers>
+ 3d0:	c0 93 96 00 	sts	0x0096, r28	; 0x800096 <TWI_slaveAddress>
+ 3d4:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <USI_TWI_On_Slave_Transmit+0x1>
+ 3d8:	10 92 8f 00 	sts	0x008F, r1	; 0x80008f <USI_TWI_On_Slave_Transmit>
+ 3dc:	10 92 8e 00 	sts	0x008E, r1	; 0x80008e <USI_TWI_On_Slave_Receive+0x1>
+ 3e0:	10 92 8d 00 	sts	0x008D, r1	; 0x80008d <USI_TWI_On_Slave_Receive>
+ 3e4:	c2 9a       	sbi	0x18, 2	; 24
+ 3e6:	c0 9a       	sbi	0x18, 0	; 24
+ 3e8:	ba 9a       	sbi	0x17, 2	; 23
+ 3ea:	b8 98       	cbi	0x17, 0	; 23
+ 3ec:	88 ea       	ldi	r24, 0xA8	; 168
+ 3ee:	8d b9       	out	0x0d, r24	; 13
+ 3f0:	80 ef       	ldi	r24, 0xF0	; 240
+ 3f2:	8e b9       	out	0x0e, r24	; 14
+ 3f4:	cf 91       	pop	r28
+ 3f6:	08 95       	ret
+
+000003f8 <USI_TWI_Slave_Disable>:
+USI_TWI_Slave_Disable():
+ 3f8:	ba 98       	cbi	0x17, 2	; 23
+ 3fa:	b8 98       	cbi	0x17, 0	; 23
+ 3fc:	1d b8       	out	0x0d, r1	; 13
+ 3fe:	80 ef       	ldi	r24, 0xF0	; 240
+ 400:	8e b9       	out	0x0e, r24	; 14
+ 402:	08 95       	ret
+
+00000404 <USI_TWI_Transmit_Byte>:
+USI_TWI_Transmit_Byte():
+ 404:	90 91 92 00 	lds	r25, 0x0092	; 0x800092 <TWI_TxHead>
+ 408:	9f 5f       	subi	r25, 0xFF	; 255
+ 40a:	9f 70       	andi	r25, 0x0F	; 15
+ 40c:	20 91 91 00 	lds	r18, 0x0091	; 0x800091 <TWI_TxTail>
+ 410:	92 17       	cp	r25, r18
+ 412:	e1 f3       	breq	.-8      	; 0x40c <USI_TWI_Transmit_Byte+0x8>
+ 414:	e9 2f       	mov	r30, r25
+ 416:	f0 e0       	ldi	r31, 0x00	; 0
+ 418:	ec 54       	subi	r30, 0x4C	; 76
+ 41a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 41c:	80 83       	st	Z, r24
+ 41e:	90 93 92 00 	sts	0x0092, r25	; 0x800092 <TWI_TxHead>
+ 422:	08 95       	ret
+
+00000424 <USI_TWI_Receive_Byte>:
+USI_TWI_Receive_Byte():
+ 424:	90 91 93 00 	lds	r25, 0x0093	; 0x800093 <TWI_RxTail>
+ 428:	80 91 94 00 	lds	r24, 0x0094	; 0x800094 <TWI_RxHead>
+ 42c:	98 17       	cp	r25, r24
+ 42e:	e1 f3       	breq	.-8      	; 0x428 <USI_TWI_Receive_Byte+0x4>
+ 430:	e0 91 93 00 	lds	r30, 0x0093	; 0x800093 <TWI_RxTail>
+ 434:	ef 5f       	subi	r30, 0xFF	; 255
+ 436:	ef 70       	andi	r30, 0x0F	; 15
+ 438:	e0 93 93 00 	sts	0x0093, r30	; 0x800093 <TWI_RxTail>
+ 43c:	f0 e0       	ldi	r31, 0x00	; 0
+ 43e:	ec 55       	subi	r30, 0x5C	; 92
+ 440:	ff 4f       	sbci	r31, 0xFF	; 255
+ 442:	80 81       	ld	r24, Z
+ 444:	08 95       	ret
+
+00000446 <USI_TWI_Data_In_Receive_Buffer>:
+USI_TWI_Data_In_Receive_Buffer():
+ 446:	90 91 93 00 	lds	r25, 0x0093	; 0x800093 <TWI_RxTail>
+ 44a:	80 91 94 00 	lds	r24, 0x0094	; 0x800094 <TWI_RxHead>
+ 44e:	89 1b       	sub	r24, r25
+ 450:	8f 70       	andi	r24, 0x0F	; 15
+ 452:	08 95       	ret
+
+00000454 <USI_TWI_Space_In_Transmission_Buffer>:
+USI_TWI_Space_In_Transmission_Buffer():
+ 454:	90 91 92 00 	lds	r25, 0x0092	; 0x800092 <TWI_TxHead>
+ 458:	80 91 91 00 	lds	r24, 0x0091	; 0x800091 <TWI_TxTail>
+ 45c:	9f 5f       	subi	r25, 0xFF	; 255
+ 45e:	89 1b       	sub	r24, r25
+ 460:	8f 70       	andi	r24, 0x0F	; 15
+ 462:	08 95       	ret
+
+00000464 <__vector_13>:
+__vector_13():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:165
+ISR(USI_START_VECTOR)
+#elif __ICCAVR__
+#pragma vector = USI_START_VECTOR
+__interrupt void USI_Start_Condition_ISR(void)
+#endif
+{
+ 464:	1f 92       	push	r1
+ 466:	0f 92       	push	r0
+ 468:	0f b6       	in	r0, 0x3f	; 63
+ 46a:	0f 92       	push	r0
+ 46c:	11 24       	eor	r1, r1
+ 46e:	0f 93       	push	r16
+ 470:	1f 93       	push	r17
+ 472:	2f 93       	push	r18
+ 474:	3f 93       	push	r19
+ 476:	4f 93       	push	r20
+ 478:	5f 93       	push	r21
+ 47a:	6f 93       	push	r22
+ 47c:	7f 93       	push	r23
+ 47e:	8f 93       	push	r24
+ 480:	9f 93       	push	r25
+ 482:	af 93       	push	r26
+ 484:	bf 93       	push	r27
+ 486:	cf 93       	push	r28
+ 488:	ef 93       	push	r30
+ 48a:	ff 93       	push	r31
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:169
+	unsigned char tmpPin; // Temporary variable for pin state
+	unsigned char tmpRxHead; // Temporary variable to store volatile
+	// call slave receive callback on repeated start
+	if (USI_TWI_On_Slave_Receive) {
+ 48c:	00 91 8d 00 	lds	r16, 0x008D	; 0x80008d <USI_TWI_On_Slave_Receive>
+ 490:	10 91 8e 00 	lds	r17, 0x008E	; 0x80008e <USI_TWI_On_Slave_Receive+0x1>
+ 494:	01 15       	cp	r16, r1
+ 496:	11 05       	cpc	r17, r1
+ 498:	61 f0       	breq	.+24     	; 0x4b2 <__vector_13+0x4e>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:170
+		tmpRxHead = TWI_RxHead;
+ 49a:	c0 91 94 00 	lds	r28, 0x0094	; 0x800094 <TWI_RxHead>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:171
+		if (TWI_RxTail != tmpRxHead) { // data in receive buffer
+ 49e:	80 91 93 00 	lds	r24, 0x0093	; 0x800093 <TWI_RxTail>
+ 4a2:	c8 17       	cp	r28, r24
+ 4a4:	31 f0       	breq	.+12     	; 0x4b2 <__vector_13+0x4e>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:172
+			USI_TWI_On_Slave_Receive(USI_TWI_Data_In_Receive_Buffer());
+ 4a6:	cf df       	rcall	.-98     	; 0x446 <USI_TWI_Data_In_Receive_Buffer>
+ 4a8:	90 e0       	ldi	r25, 0x00	; 0
+ 4aa:	f8 01       	movw	r30, r16
+ 4ac:	09 95       	icall
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:174
+			// reset rx buffer
+			TWI_RxTail = tmpRxHead;
+ 4ae:	c0 93 93 00 	sts	0x0093, r28	; 0x800093 <TWI_RxTail>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:178
+		}
+	}
+
+	USI_TWI_Overflow_State = USI_SLAVE_CHECK_ADDRESS;
+ 4b2:	10 92 95 00 	sts	0x0095, r1	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:179
+	DDR_USI &= ~(1 << PORT_USI_SDA); // Set SDA as input
+ 4b6:	b8 98       	cbi	0x17, 0	; 23
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:180 (discriminator 2)
+	while ((tmpPin = (PIN_USI_CL & (1 << PORT_USI_SCL))) && ((PIN_USI & (1 << PIN_USI_SDA)) == 0))
+ 4b8:	b2 9b       	sbis	0x16, 2	; 22
+ 4ba:	04 c0       	rjmp	.+8      	; 0x4c4 <__vector_13+0x60>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:180 (discriminator 1)
+ 4bc:	b0 9b       	sbis	0x16, 0	; 22
+ 4be:	fc cf       	rjmp	.-8      	; 0x4b8 <__vector_13+0x54>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:185
+		; // Wait for SCL to go low to ensure the "Start Condition" has completed.
+	      // If a Stop condition arises then leave the interrupt to prevent waiting forever.
+	if (tmpPin) {
+		// Stop Condition (waiting for next Start Condition)
+		USICR = (1 << USISIE) | (0 << USIOIE) | // Enable Start Condition Interrupt. Disable Overflow Interrupt.
+ 4c0:	88 ea       	ldi	r24, 0xA8	; 168
+ 4c2:	01 c0       	rjmp	.+2      	; 0x4c6 <__vector_13+0x62>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:192
+		                                        // to first Start Condition (potentail failure)
+		        (1 << USICS1) | (0 << USICS0) | (0 << USICLK) | // Shift Register Clock Source = External, positive edge
+		        (0 << USITC);
+	} else {
+		// really Start Condition (Enable Overflow Interrupt)
+		USICR = (1 << USISIE) | (1 << USIOIE)
+ 4c4:	88 ef       	ldi	r24, 0xF8	; 248
+ 4c6:	8d b9       	out	0x0d, r24	; 13
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:198
+		        | // Enable Overflow and Start Condition Interrupt. (Keep StartCondInt to detect RESTART)
+		        (1 << USIWM1) | (1 << USIWM0) |                 // Set USI in Two-wire mode.
+		        (1 << USICS1) | (0 << USICS0) | (0 << USICLK) | // Shift Register Clock Source = External, positive edge
+		        (0 << USITC);
+	}
+	USISR = (1 << USI_START_COND_INT) | (1 << USIOIF) | (1 << USIPF) | (1 << USIDC) | // Clear flags
+ 4c8:	80 ef       	ldi	r24, 0xF0	; 240
+ 4ca:	8e b9       	out	0x0e, r24	; 14
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:200
+	        (0x0 << USICNT0); // Set USI to sample 8 bits i.e. count 16 external pin toggles.
+}
+ 4cc:	ff 91       	pop	r31
+ 4ce:	ef 91       	pop	r30
+ 4d0:	cf 91       	pop	r28
+ 4d2:	bf 91       	pop	r27
+ 4d4:	af 91       	pop	r26
+ 4d6:	9f 91       	pop	r25
+ 4d8:	8f 91       	pop	r24
+ 4da:	7f 91       	pop	r23
+ 4dc:	6f 91       	pop	r22
+ 4de:	5f 91       	pop	r21
+ 4e0:	4f 91       	pop	r20
+ 4e2:	3f 91       	pop	r19
+ 4e4:	2f 91       	pop	r18
+ 4e6:	1f 91       	pop	r17
+ 4e8:	0f 91       	pop	r16
+ 4ea:	0f 90       	pop	r0
+ 4ec:	0f be       	out	0x3f, r0	; 63
+ 4ee:	0f 90       	pop	r0
+ 4f0:	1f 90       	pop	r1
+ 4f2:	18 95       	reti
+
+000004f4 <__vector_14>:
+__vector_14():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:212
+ISR(USI_OVERFLOW_VECTOR)
+#elif __ICCAVR__
+#pragma vector = USI_OVERFLOW_VECTOR
+__interrupt void USI_Counter_Overflow_ISR(void)
+#endif
+{
+ 4f4:	1f 92       	push	r1
+ 4f6:	0f 92       	push	r0
+ 4f8:	0f b6       	in	r0, 0x3f	; 63
+ 4fa:	0f 92       	push	r0
+ 4fc:	11 24       	eor	r1, r1
+ 4fe:	0f 93       	push	r16
+ 500:	1f 93       	push	r17
+ 502:	2f 93       	push	r18
+ 504:	3f 93       	push	r19
+ 506:	4f 93       	push	r20
+ 508:	5f 93       	push	r21
+ 50a:	6f 93       	push	r22
+ 50c:	7f 93       	push	r23
+ 50e:	8f 93       	push	r24
+ 510:	9f 93       	push	r25
+ 512:	af 93       	push	r26
+ 514:	bf 93       	push	r27
+ 516:	cf 93       	push	r28
+ 518:	ef 93       	push	r30
+ 51a:	ff 93       	push	r31
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:217
+	unsigned char tmpRxHead;
+	unsigned char tmpTxTail; // Temporary variables to store volatiles
+	unsigned char tmpUSIDR;
+
+	switch (USI_TWI_Overflow_State) {
+ 51c:	80 91 95 00 	lds	r24, 0x0095	; 0x800095 <USI_TWI_Overflow_State>
+ 520:	82 30       	cpi	r24, 0x02	; 2
+ 522:	09 f4       	brne	.+2      	; 0x526 <__vector_14+0x32>
+ 524:	4c c0       	rjmp	.+152    	; 0x5be <__vector_14+0xca>
+ 526:	28 f4       	brcc	.+10     	; 0x532 <__vector_14+0x3e>
+ 528:	88 23       	and	r24, r24
+ 52a:	59 f0       	breq	.+22     	; 0x542 <__vector_14+0x4e>
+ 52c:	81 30       	cpi	r24, 0x01	; 1
+ 52e:	51 f1       	breq	.+84     	; 0x584 <__vector_14+0x90>
+ 530:	83 c0       	rjmp	.+262    	; 0x638 <__vector_14+0x144>
+ 532:	84 30       	cpi	r24, 0x04	; 4
+ 534:	09 f4       	brne	.+2      	; 0x538 <__vector_14+0x44>
+ 536:	49 c0       	rjmp	.+146    	; 0x5ca <__vector_14+0xd6>
+ 538:	10 f1       	brcs	.+68     	; 0x57e <__vector_14+0x8a>
+ 53a:	85 30       	cpi	r24, 0x05	; 5
+ 53c:	09 f4       	brne	.+2      	; 0x540 <__vector_14+0x4c>
+ 53e:	64 c0       	rjmp	.+200    	; 0x608 <__vector_14+0x114>
+ 540:	7b c0       	rjmp	.+246    	; 0x638 <__vector_14+0x144>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:221
+	// ---------- Address mode ----------
+	// Check address and send ACK (and next USI_SLAVE_SEND_DATA) if OK, else reset USI.
+	case USI_SLAVE_CHECK_ADDRESS:
+		if ((USIDR == 0) || ((USIDR >> 1) == TWI_slaveAddress)) {
+ 542:	8f b1       	in	r24, 0x0f	; 15
+ 544:	88 23       	and	r24, r24
+ 546:	31 f0       	breq	.+12     	; 0x554 <__vector_14+0x60>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:221 (discriminator 1)
+ 548:	8f b1       	in	r24, 0x0f	; 15
+ 54a:	86 95       	lsr	r24
+ 54c:	90 91 96 00 	lds	r25, 0x0096	; 0x800096 <TWI_slaveAddress>
+ 550:	89 13       	cpse	r24, r25
+ 552:	30 c0       	rjmp	.+96     	; 0x5b4 <__vector_14+0xc0>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:222
+			if (USIDR & 0x01) {
+ 554:	78 9b       	sbis	0x0f, 0	; 15
+ 556:	0d c0       	rjmp	.+26     	; 0x572 <__vector_14+0x7e>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:223
+				if (USI_TWI_On_Slave_Transmit) {
+ 558:	e0 91 8f 00 	lds	r30, 0x008F	; 0x80008f <USI_TWI_On_Slave_Transmit>
+ 55c:	f0 91 90 00 	lds	r31, 0x0090	; 0x800090 <USI_TWI_On_Slave_Transmit+0x1>
+ 560:	30 97       	sbiw	r30, 0x00	; 0
+ 562:	29 f0       	breq	.+10     	; 0x56e <__vector_14+0x7a>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:225
+					// reset tx buffer and call callback
+					tmpTxTail = TWI_TxHead;
+ 564:	80 91 92 00 	lds	r24, 0x0092	; 0x800092 <TWI_TxHead>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:226
+					TWI_TxTail = tmpTxTail;
+ 568:	80 93 91 00 	sts	0x0091, r24	; 0x800091 <TWI_TxTail>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:227
+					USI_TWI_On_Slave_Transmit();
+ 56c:	09 95       	icall
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:229
+				}
+				USI_TWI_Overflow_State = USI_SLAVE_SEND_DATA;
+ 56e:	81 e0       	ldi	r24, 0x01	; 1
+ 570:	01 c0       	rjmp	.+2      	; 0x574 <__vector_14+0x80>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:231
+			} else {
+				USI_TWI_Overflow_State = USI_SLAVE_REQUEST_DATA;
+ 572:	84 e0       	ldi	r24, 0x04	; 4
+ 574:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:233
+			}
+			SET_USI_TO_SEND_ACK();
+ 578:	1f b8       	out	0x0f, r1	; 15
+ 57a:	b8 9a       	sbi	0x17, 0	; 23
+ 57c:	5b c0       	rjmp	.+182    	; 0x634 <__vector_14+0x140>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:242
+		break;
+
+	// ----- Master write data mode ------
+	// Check reply and goto USI_SLAVE_SEND_DATA if OK, else reset USI.
+	case USI_SLAVE_CHECK_REPLY_FROM_SEND_DATA:
+		if (USIDR) // If NACK, the master does not want more data.
+ 57e:	8f b1       	in	r24, 0x0f	; 15
+ 580:	81 11       	cpse	r24, r1
+ 582:	18 c0       	rjmp	.+48     	; 0x5b4 <__vector_14+0xc0>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:253
+
+	// Copy data from buffer to USIDR and set USI to shift byte. Next USI_SLAVE_REQUEST_REPLY_FROM_SEND_DATA
+	case USI_SLAVE_SEND_DATA:
+
+		// Get data from Buffer
+		tmpTxTail = TWI_TxTail; // Not necessary, but prevents warnings
+ 584:	90 91 91 00 	lds	r25, 0x0091	; 0x800091 <TWI_TxTail>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:254
+		if (TWI_TxHead != tmpTxTail) {
+ 588:	80 91 92 00 	lds	r24, 0x0092	; 0x800092 <TWI_TxHead>
+ 58c:	98 17       	cp	r25, r24
+ 58e:	91 f0       	breq	.+36     	; 0x5b4 <__vector_14+0xc0>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:255
+			TWI_TxTail = (TWI_TxTail + 1) & TWI_TX_BUFFER_MASK;
+ 590:	80 91 91 00 	lds	r24, 0x0091	; 0x800091 <TWI_TxTail>
+ 594:	8f 5f       	subi	r24, 0xFF	; 255
+ 596:	8f 70       	andi	r24, 0x0F	; 15
+ 598:	80 93 91 00 	sts	0x0091, r24	; 0x800091 <TWI_TxTail>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:256
+			USIDR      = TWI_TxBuf[TWI_TxTail];
+ 59c:	e0 91 91 00 	lds	r30, 0x0091	; 0x800091 <TWI_TxTail>
+ 5a0:	f0 e0       	ldi	r31, 0x00	; 0
+ 5a2:	ec 54       	subi	r30, 0x4C	; 76
+ 5a4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5a6:	80 81       	ld	r24, Z
+ 5a8:	8f b9       	out	0x0f, r24	; 15
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:262
+		} else // If the buffer is empty then:
+		{
+			SET_USI_TO_TWI_START_CONDITION_MODE();
+			return;
+		}
+		USI_TWI_Overflow_State = USI_SLAVE_REQUEST_REPLY_FROM_SEND_DATA;
+ 5aa:	82 e0       	ldi	r24, 0x02	; 2
+ 5ac:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:263
+		SET_USI_TO_SEND_DATA();
+ 5b0:	b8 9a       	sbi	0x17, 0	; 23
+ 5b2:	03 c0       	rjmp	.+6      	; 0x5ba <__vector_14+0xc6>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:259
+		if (TWI_TxHead != tmpTxTail) {
+			TWI_TxTail = (TWI_TxTail + 1) & TWI_TX_BUFFER_MASK;
+			USIDR      = TWI_TxBuf[TWI_TxTail];
+		} else // If the buffer is empty then:
+		{
+			SET_USI_TO_TWI_START_CONDITION_MODE();
+ 5b4:	b8 98       	cbi	0x17, 0	; 23
+ 5b6:	88 ea       	ldi	r24, 0xA8	; 168
+ 5b8:	8d b9       	out	0x0d, r24	; 13
+ 5ba:	80 e7       	ldi	r24, 0x70	; 112
+ 5bc:	3c c0       	rjmp	.+120    	; 0x636 <__vector_14+0x142>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:268
+		SET_USI_TO_SEND_DATA();
+		break;
+
+	// Set USI to sample reply from master. Next USI_SLAVE_CHECK_REPLY_FROM_SEND_DATA
+	case USI_SLAVE_REQUEST_REPLY_FROM_SEND_DATA:
+		USI_TWI_Overflow_State = USI_SLAVE_CHECK_REPLY_FROM_SEND_DATA;
+ 5be:	83 e0       	ldi	r24, 0x03	; 3
+ 5c0:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:269
+		SET_USI_TO_READ_ACK();
+ 5c4:	b8 98       	cbi	0x17, 0	; 23
+ 5c6:	1f b8       	out	0x0f, r1	; 15
+ 5c8:	35 c0       	rjmp	.+106    	; 0x634 <__vector_14+0x140>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:275
+		break;
+
+	// ----- Master read data mode ------
+	// Set USI to sample data from master. Next USI_SLAVE_GET_DATA_AND_SEND_ACK.
+	case USI_SLAVE_REQUEST_DATA:
+		USI_TWI_Overflow_State = USI_SLAVE_GET_DATA_AND_SEND_ACK;
+ 5ca:	85 e0       	ldi	r24, 0x05	; 5
+ 5cc:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:276
+		SET_USI_TO_READ_DATA();
+ 5d0:	b8 98       	cbi	0x17, 0	; 23
+ 5d2:	80 e7       	ldi	r24, 0x70	; 112
+ 5d4:	8e b9       	out	0x0e, r24	; 14
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:278
+		// call slave receive callback on stop condition
+		if (USI_TWI_On_Slave_Receive) {
+ 5d6:	00 91 8d 00 	lds	r16, 0x008D	; 0x80008d <USI_TWI_On_Slave_Receive>
+ 5da:	10 91 8e 00 	lds	r17, 0x008E	; 0x80008e <USI_TWI_On_Slave_Receive+0x1>
+ 5de:	01 15       	cp	r16, r1
+ 5e0:	11 05       	cpc	r17, r1
+ 5e2:	51 f1       	breq	.+84     	; 0x638 <__vector_14+0x144>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:279
+			tmpRxHead = TWI_RxHead;
+ 5e4:	c0 91 94 00 	lds	r28, 0x0094	; 0x800094 <TWI_RxHead>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:280
+			if (TWI_RxTail != tmpRxHead) { // data in receive buffer
+ 5e8:	80 91 93 00 	lds	r24, 0x0093	; 0x800093 <TWI_RxTail>
+ 5ec:	c8 17       	cp	r28, r24
+ 5ee:	21 f1       	breq	.+72     	; 0x638 <__vector_14+0x144>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:282 (discriminator 1)
+				// check for stop Condition
+				while ((USISR & ((1 << USI_START_COND_INT) | (1 << USIPF) | (0xE << USICNT0))) == 0)
+ 5f0:	8e b1       	in	r24, 0x0e	; 14
+ 5f2:	8e 7a       	andi	r24, 0xAE	; 174
+ 5f4:	e9 f3       	breq	.-6      	; 0x5f0 <__vector_14+0xfc>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:285
+					;// wait for either Start or Stop Condition
+					// cancel after one SCL cycle
+				if (USISR & (1 << USIPF)) { // Stop Condition
+ 5f6:	75 9b       	sbis	0x0e, 5	; 14
+ 5f8:	1f c0       	rjmp	.+62     	; 0x638 <__vector_14+0x144>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:286
+					USI_TWI_On_Slave_Receive(USI_TWI_Data_In_Receive_Buffer());
+ 5fa:	25 df       	rcall	.-438    	; 0x446 <USI_TWI_Data_In_Receive_Buffer>
+ 5fc:	90 e0       	ldi	r25, 0x00	; 0
+ 5fe:	f8 01       	movw	r30, r16
+ 600:	09 95       	icall
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:288
+					// reset rx buffer
+					TWI_RxTail = tmpRxHead;
+ 602:	c0 93 93 00 	sts	0x0093, r28	; 0x800093 <TWI_RxTail>
+ 606:	18 c0       	rjmp	.+48     	; 0x638 <__vector_14+0x144>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:297
+		break;
+
+	// Copy data from USIDR and send ACK. Next USI_SLAVE_REQUEST_DATA
+	case USI_SLAVE_GET_DATA_AND_SEND_ACK:
+		// Put data into Buffer
+		USI_TWI_Overflow_State = USI_SLAVE_REQUEST_DATA;
+ 608:	84 e0       	ldi	r24, 0x04	; 4
+ 60a:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <USI_TWI_Overflow_State>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:298
+		tmpUSIDR              = USIDR; // Not necessary, but prevents warnings
+ 60e:	9f b1       	in	r25, 0x0f	; 15
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:299
+		tmpRxHead = (TWI_RxHead + 1) & TWI_RX_BUFFER_MASK;
+ 610:	80 91 94 00 	lds	r24, 0x0094	; 0x800094 <TWI_RxHead>
+ 614:	8f 5f       	subi	r24, 0xFF	; 255
+ 616:	8f 70       	andi	r24, 0x0F	; 15
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:300
+		if (TWI_RxTail != tmpRxHead) {
+ 618:	20 91 93 00 	lds	r18, 0x0093	; 0x800093 <TWI_RxTail>
+ 61c:	82 17       	cp	r24, r18
+ 61e:	49 f0       	breq	.+18     	; 0x632 <__vector_14+0x13e>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:301
+			TWI_RxHead            = tmpRxHead;
+ 620:	80 93 94 00 	sts	0x0094, r24	; 0x800094 <TWI_RxHead>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:302
+			TWI_RxBuf[TWI_RxHead] = tmpUSIDR;
+ 624:	e0 91 94 00 	lds	r30, 0x0094	; 0x800094 <TWI_RxHead>
+ 628:	f0 e0       	ldi	r31, 0x00	; 0
+ 62a:	ec 55       	subi	r30, 0x5C	; 92
+ 62c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 62e:	90 83       	st	Z, r25
+ 630:	a3 cf       	rjmp	.-186    	; 0x578 <__vector_14+0x84>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:306
+			SET_USI_TO_SEND_ACK();
+		} else // If the buffer is full then:
+		{
+			SET_USI_TO_SEND_NACK();
+ 632:	b8 98       	cbi	0x17, 0	; 23
+ 634:	8e e7       	ldi	r24, 0x7E	; 126
+ 636:	8e b9       	out	0x0e, r24	; 14
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\libraries\Wire\src\USI_TWI_Slave/USI_TWI_Slave.c:310
+		}
+		break;
+	}
+}
+ 638:	ff 91       	pop	r31
+ 63a:	ef 91       	pop	r30
+ 63c:	cf 91       	pop	r28
+ 63e:	bf 91       	pop	r27
+ 640:	af 91       	pop	r26
+ 642:	9f 91       	pop	r25
+ 644:	8f 91       	pop	r24
+ 646:	7f 91       	pop	r23
+ 648:	6f 91       	pop	r22
+ 64a:	5f 91       	pop	r21
+ 64c:	4f 91       	pop	r20
+ 64e:	3f 91       	pop	r19
+ 650:	2f 91       	pop	r18
+ 652:	1f 91       	pop	r17
+ 654:	0f 91       	pop	r16
+ 656:	0f 90       	pop	r0
+ 658:	0f be       	out	0x3f, r0	; 63
+ 65a:	0f 90       	pop	r0
+ 65c:	1f 90       	pop	r1
+ 65e:	18 95       	reti
+
+00000660 <pcint_null_callback>:
+pcint_null_callback():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.cpp:85
+
+#endif // PCINT_INCLUDE_FROM_CPP
+
+// useless function for weak implemented/not used functions, extern c needed for the alias
+extern "C" {
+	void pcint_null_callback(void) {
+ 660:	08 95       	ret
+
+00000662 <PinChangeInterruptEventPCINT0()>:
+_Z29PinChangeInterruptEventPCINT0v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:99
+}
+*/
+#if (PCINT_USE_PCINT0 == true)
+volatile callback callbackPCINT0 = pcint_null_callback;
+void PinChangeInterruptEventPCINT0(void) {
+	callbackPCINT0();
+ 662:	e0 91 86 00 	lds	r30, 0x0086	; 0x800086 <callbackPCINT0>
+ 666:	f0 91 87 00 	lds	r31, 0x0087	; 0x800087 <callbackPCINT0+0x1>
+ 66a:	09 94       	ijmp
+
+0000066c <PinChangeInterruptEventPCINT1()>:
+_Z29PinChangeInterruptEventPCINT1v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:105
+}
+#endif
+#if (PCINT_USE_PCINT1 == true)
+volatile callback callbackPCINT1 = pcint_null_callback;
+void PinChangeInterruptEventPCINT1(void) {
+	callbackPCINT1();
+ 66c:	e0 91 84 00 	lds	r30, 0x0084	; 0x800084 <callbackPCINT1>
+ 670:	f0 91 85 00 	lds	r31, 0x0085	; 0x800085 <callbackPCINT1+0x1>
+ 674:	09 94       	ijmp
+
+00000676 <PinChangeInterruptEventPCINT2()>:
+_Z29PinChangeInterruptEventPCINT2v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:111
+}
+#endif
+#if (PCINT_USE_PCINT2 == true)
+volatile callback callbackPCINT2 = pcint_null_callback;
+void PinChangeInterruptEventPCINT2(void) {
+	callbackPCINT2();
+ 676:	e0 91 82 00 	lds	r30, 0x0082	; 0x800082 <callbackPCINT2>
+ 67a:	f0 91 83 00 	lds	r31, 0x0083	; 0x800083 <callbackPCINT2+0x1>
+ 67e:	09 94       	ijmp
+
+00000680 <PinChangeInterruptEventPCINT3()>:
+_Z29PinChangeInterruptEventPCINT3v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:117
+}
+#endif
+#if (PCINT_USE_PCINT3 == true)
+volatile callback callbackPCINT3 = pcint_null_callback;
+void PinChangeInterruptEventPCINT3(void) {
+	callbackPCINT3();
+ 680:	e0 91 80 00 	lds	r30, 0x0080	; 0x800080 <callbackPCINT3>
+ 684:	f0 91 81 00 	lds	r31, 0x0081	; 0x800081 <callbackPCINT3+0x1>
+ 688:	09 94       	ijmp
+
+0000068a <PinChangeInterruptEventPCINT4()>:
+_Z29PinChangeInterruptEventPCINT4v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:123
+}
+#endif
+#if (PCINT_USE_PCINT4 == true)
+volatile callback callbackPCINT4 = pcint_null_callback;
+void PinChangeInterruptEventPCINT4(void) {
+	callbackPCINT4();
+ 68a:	e0 91 7e 00 	lds	r30, 0x007E	; 0x80007e <callbackPCINT4>
+ 68e:	f0 91 7f 00 	lds	r31, 0x007F	; 0x80007f <callbackPCINT4+0x1>
+ 692:	09 94       	ijmp
+
+00000694 <PinChangeInterruptEventPCINT5()>:
+_Z29PinChangeInterruptEventPCINT5v():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:129
+}
+#endif
+#if (PCINT_USE_PCINT5 == true)
+volatile callback callbackPCINT5 = pcint_null_callback;
+void PinChangeInterruptEventPCINT5(void) {
+	callbackPCINT5();
+ 694:	e0 91 7c 00 	lds	r30, 0x007C	; 0x80007c <callbackPCINT5>
+ 698:	f0 91 7d 00 	lds	r31, 0x007D	; 0x80007d <callbackPCINT5+0x1>
+ 69c:	09 94       	ijmp
+
+0000069e <__vector_2>:
+__vector_2():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:40
+
+void attachPinChangeInterrupt0(void) {
+	// fake function to make the IDE link this file
+}
+
+ISR(PCINT0_vect) {
+ 69e:	1f 92       	push	r1
+ 6a0:	0f 92       	push	r0
+ 6a2:	0f b6       	in	r0, 0x3f	; 63
+ 6a4:	0f 92       	push	r0
+ 6a6:	11 24       	eor	r1, r1
+ 6a8:	2f 93       	push	r18
+ 6aa:	3f 93       	push	r19
+ 6ac:	4f 93       	push	r20
+ 6ae:	5f 93       	push	r21
+ 6b0:	6f 93       	push	r22
+ 6b2:	7f 93       	push	r23
+ 6b4:	8f 93       	push	r24
+ 6b6:	9f 93       	push	r25
+ 6b8:	af 93       	push	r26
+ 6ba:	bf 93       	push	r27
+ 6bc:	cf 93       	push	r28
+ 6be:	ef 93       	push	r30
+ 6c0:	ff 93       	push	r31
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:42
+	// get the new and old pin states for port
+	uint8_t newPort = PCINT_INPUT_PORT0;
+ 6c2:	26 b3       	in	r18, 0x16	; 22
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:46
+
+	// compare with the old value to detect a rising or falling
+	uint8_t arrayPos = getArrayPosPCINT(0);
+	uint8_t change = newPort ^ oldPorts[arrayPos];
+ 6c4:	c0 91 99 00 	lds	r28, 0x0099	; 0x800099 <oldPorts>
+ 6c8:	82 2f       	mov	r24, r18
+ 6ca:	8c 27       	eor	r24, r28
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:53
+	uint8_t falling = change & oldPorts[arrayPos];
+
+	// check which pins are triggered, compared with the settings
+	uint8_t risingTrigger = rising & risingPorts[arrayPos];
+	uint8_t fallingTrigger = falling & fallingPorts[arrayPos];
+	uint8_t trigger = risingTrigger | fallingTrigger;
+ 6cc:	90 91 97 00 	lds	r25, 0x0097	; 0x800097 <risingPorts>
+ 6d0:	92 23       	and	r25, r18
+ 6d2:	30 91 98 00 	lds	r19, 0x0098	; 0x800098 <fallingPorts>
+ 6d6:	c3 23       	and	r28, r19
+ 6d8:	c9 2b       	or	r28, r25
+ 6da:	c8 23       	and	r28, r24
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:56
+
+	// save the new state for next comparison
+	oldPorts[arrayPos] = newPort;
+ 6dc:	20 93 99 00 	sts	0x0099, r18	; 0x800099 <oldPorts>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:63
+	// Execute all functions that should be triggered
+	// This way we can exclude a single function
+	// and the calling is also much faster
+	// We may also reorder the pins for different priority
+#if !defined(PCINT_CALLBACK_PORT0)
+	PCINT_CALLBACK(0, 0);
+ 6e0:	c0 fd       	sbrc	r28, 0
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:63 (discriminator 1)
+ 6e2:	bf df       	rcall	.-130    	; 0x662 <PinChangeInterruptEventPCINT0()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:64
+	PCINT_CALLBACK(1, 1);
+ 6e4:	c1 fd       	sbrc	r28, 1
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:64 (discriminator 1)
+ 6e6:	c2 df       	rcall	.-124    	; 0x66c <PinChangeInterruptEventPCINT1()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:65
+	PCINT_CALLBACK(2, 2);
+ 6e8:	c2 fd       	sbrc	r28, 2
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:65 (discriminator 1)
+ 6ea:	c5 df       	rcall	.-118    	; 0x676 <PinChangeInterruptEventPCINT2()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:66
+	PCINT_CALLBACK(3, 3);
+ 6ec:	c3 fd       	sbrc	r28, 3
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:66 (discriminator 1)
+ 6ee:	c8 df       	rcall	.-112    	; 0x680 <PinChangeInterruptEventPCINT3()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:67
+	PCINT_CALLBACK(4, 4);
+ 6f0:	c4 fd       	sbrc	r28, 4
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:67 (discriminator 1)
+ 6f2:	cb df       	rcall	.-106    	; 0x68a <PinChangeInterruptEventPCINT4()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:68
+	PCINT_CALLBACK(5, 5);
+ 6f4:	c5 fd       	sbrc	r28, 5
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:68 (discriminator 1)
+ 6f6:	ce df       	rcall	.-100    	; 0x694 <PinChangeInterruptEventPCINT5()>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt0.cpp:74
+	PCINT_CALLBACK(6, 6);
+	PCINT_CALLBACK(7, 7);
+#else
+	PCINT_CALLBACK_PORT0
+#endif
+}
+ 6f8:	ff 91       	pop	r31
+ 6fa:	ef 91       	pop	r30
+ 6fc:	cf 91       	pop	r28
+ 6fe:	bf 91       	pop	r27
+ 700:	af 91       	pop	r26
+ 702:	9f 91       	pop	r25
+ 704:	8f 91       	pop	r24
+ 706:	7f 91       	pop	r23
+ 708:	6f 91       	pop	r22
+ 70a:	5f 91       	pop	r21
+ 70c:	4f 91       	pop	r20
+ 70e:	3f 91       	pop	r19
+ 710:	2f 91       	pop	r18
+ 712:	0f 90       	pop	r0
+ 714:	0f be       	out	0x3f, r0	; 63
+ 716:	0f 90       	pop	r0
+ 718:	1f 90       	pop	r1
+ 71a:	18 95       	reti
+
+0000071c <enablePinChangeInterruptHelper(unsigned char, unsigned char, unsigned char)>:
+_Z30enablePinChangeInterruptHelperhhh():
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.cpp:101
+uint8_t fallingPorts[PCINT_NUM_USED_PORTS] = { 0 };
+uint8_t risingPorts[PCINT_NUM_USED_PORTS] = { 0 };
+
+void enablePinChangeInterruptHelper(const uint8_t pcintPort, const uint8_t pcintMask, const uint8_t arrayPos){
+	// Update the old state to the actual state
+	switch(pcintPort){
+ 71c:	81 11       	cpse	r24, r1
+ 71e:	06 c0       	rjmp	.+12     	; 0x72c <enablePinChangeInterruptHelper(unsigned char, unsigned char, unsigned char)+0x10>
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.cpp:104
+#ifdef PCINT_INPUT_PORT0_USED
+		case 0:
+			oldPorts[arrayPos] = PCINT_INPUT_PORT0;
+ 720:	96 b3       	in	r25, 0x16	; 22
+ 722:	e4 2f       	mov	r30, r20
+ 724:	f0 e0       	ldi	r31, 0x00	; 0
+ 726:	e7 56       	subi	r30, 0x67	; 103
+ 728:	ff 4f       	sbci	r31, 0xFF	; 255
+ 72a:	90 83       	st	Z, r25
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.cpp:160
+#endif
+		}
+	}
+#endif
+#elif defined(PCMSK)
+	*(&PCMSK + pcintPort) |= pcintMask;
+ 72c:	e8 2f       	mov	r30, r24
+ 72e:	f0 e0       	ldi	r31, 0x00	; 0
+ 730:	85 a9       	ldd	r24, Z+53	; 0x35
+ 732:	68 2b       	or	r22, r24
+ 734:	65 ab       	std	Z+53, r22	; 0x35
+C:\Users\wesley.furuya\Documents\Arduino\libraries\PinChangeInterrupt-master\src/PinChangeInterrupt.cpp:171
+#elif defined(GICR) /* e.g. ATmega162 */
+	GICR |= (1  << (pcintPort + PCIE0));
+#elif defined(GIMSK) && defined(PCIE0) /* e.g. ATtiny X4 */
+	GIMSK |= (1  << (pcintPort + PCIE0));
+#elif defined(GIMSK) && defined(PCIE) /* e.g. ATtiny X5 */
+	GIMSK |= (1  << (pcintPort + PCIE));
+ 736:	2b b7       	in	r18, 0x3b	; 59
+ 738:	35 96       	adiw	r30, 0x05	; 5
+ 73a:	81 e0       	ldi	r24, 0x01	; 1
+ 73c:	90 e0       	ldi	r25, 0x00	; 0
+ 73e:	01 c0       	rjmp	.+2      	; 0x742 <enablePinChangeInterruptHelper(unsigned char, unsigned char, unsigned char)+0x26>
+ 740:	88 0f       	add	r24, r24
+ 742:	ea 95       	dec	r30
+ 744:	ea f7       	brpl	.-6      	; 0x740 <enablePinChangeInterruptHelper(unsigned char, unsigned char, unsigned char)+0x24>
+ 746:	82 2b       	or	r24, r18
+ 748:	8b bf       	out	0x3b, r24	; 59
+ 74a:	08 95       	ret
+
+0000074c <analogRead>:
+analogRead():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:72
+  #ifndef ADCSRA
+  return digitalRead(analogInputToDigitalPin(pin)) ? 1023 : 0; //No ADC, so read as a digital pin instead.
+  #endif
+  
+  #if defined(ADMUX)
+  ADMUX = ((analog_reference & ADMUX_REFS_MASK) << REFS0) | ((pin & ADMUX_MUX_MASK) << MUX0); //select the channel and reference
+ 74c:	90 91 9a 00 	lds	r25, 0x009A	; 0x80009a <analog_reference>
+ 750:	92 95       	swap	r25
+ 752:	99 0f       	add	r25, r25
+ 754:	99 0f       	add	r25, r25
+ 756:	90 7c       	andi	r25, 0xC0	; 192
+ 758:	8f 70       	andi	r24, 0x0F	; 15
+ 75a:	89 2b       	or	r24, r25
+ 75c:	87 b9       	out	0x07, r24	; 7
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:74
+  #if defined(REFS2)
+  ADMUX |= (((analog_reference & 0x04) >> 2) << REFS2); //some have an extra reference bit in a weird position.
+ 75e:	87 b1       	in	r24, 0x07	; 7
+ 760:	90 91 9a 00 	lds	r25, 0x009A	; 0x80009a <analog_reference>
+ 764:	92 fb       	bst	r25, 2
+ 766:	22 27       	eor	r18, r18
+ 768:	20 f9       	bld	r18, 0
+ 76a:	30 e0       	ldi	r19, 0x00	; 0
+ 76c:	94 e0       	ldi	r25, 0x04	; 4
+ 76e:	22 0f       	add	r18, r18
+ 770:	33 1f       	adc	r19, r19
+ 772:	9a 95       	dec	r25
+ 774:	e1 f7       	brne	.-8      	; 0x76e <analogRead+0x22>
+ 776:	28 2b       	or	r18, r24
+ 778:	27 b9       	out	0x07, r18	; 7
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:79
+  #endif
+  #endif
+  
+  #if defined(HAVE_ADC) && HAVE_ADC
+  sbi(ADCSRA, ADSC); //Start conversion
+ 77a:	36 9a       	sbi	0x06, 6	; 6
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:81 (discriminator 1)
+
+  while(ADCSRA & (1<<ADSC)); //Wait for conversion to complete.
+ 77c:	36 99       	sbic	0x06, 6	; 6
+ 77e:	fe cf       	rjmp	.-4      	; 0x77c <analogRead+0x30>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:83
+
+  uint8_t low = ADCL;
+ 780:	84 b1       	in	r24, 0x04	; 4
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:84
+  uint8_t high = ADCH;
+ 782:	25 b1       	in	r18, 0x05	; 5
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:85
+  return (high << 8) | low;
+ 784:	90 e0       	ldi	r25, 0x00	; 0
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_analog.c:89
+  #else
+  return LOW;
+  #endif
+}
+ 786:	92 2b       	or	r25, r18
+ 788:	08 95       	ret
+
+0000078a <turnOffPWM>:
+turnOffPWM():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:163
+		uint8_t oldSREG = SREG;
+    cli();
+		*out |= bit;
+		SREG = oldSREG;
+	}
+}
+ 78a:	81 30       	cpi	r24, 0x01	; 1
+ 78c:	31 f4       	brne	.+12     	; 0x79a <turnOffPWM+0x10>
+ 78e:	8a b5       	in	r24, 0x2a	; 42
+ 790:	8f 77       	andi	r24, 0x7F	; 127
+ 792:	8a bd       	out	0x2a, r24	; 42
+ 794:	8a b5       	in	r24, 0x2a	; 42
+ 796:	8f 7b       	andi	r24, 0xBF	; 191
+ 798:	07 c0       	rjmp	.+14     	; 0x7a8 <turnOffPWM+0x1e>
+ 79a:	82 30       	cpi	r24, 0x02	; 2
+ 79c:	39 f4       	brne	.+14     	; 0x7ac <turnOffPWM+0x22>
+ 79e:	8a b5       	in	r24, 0x2a	; 42
+ 7a0:	8f 7d       	andi	r24, 0xDF	; 223
+ 7a2:	8a bd       	out	0x2a, r24	; 42
+ 7a4:	8a b5       	in	r24, 0x2a	; 42
+ 7a6:	8f 7e       	andi	r24, 0xEF	; 239
+ 7a8:	8a bd       	out	0x2a, r24	; 42
+ 7aa:	08 95       	ret
+ 7ac:	83 30       	cpi	r24, 0x03	; 3
+ 7ae:	39 f4       	brne	.+14     	; 0x7be <turnOffPWM+0x34>
+ 7b0:	80 b7       	in	r24, 0x30	; 48
+ 7b2:	8f 7d       	andi	r24, 0xDF	; 223
+ 7b4:	80 bf       	out	0x30, r24	; 48
+ 7b6:	80 b7       	in	r24, 0x30	; 48
+ 7b8:	8f 7e       	andi	r24, 0xEF	; 239
+ 7ba:	80 bf       	out	0x30, r24	; 48
+ 7bc:	08 95       	ret
+ 7be:	84 30       	cpi	r24, 0x04	; 4
+ 7c0:	31 f4       	brne	.+12     	; 0x7ce <turnOffPWM+0x44>
+ 7c2:	8c b5       	in	r24, 0x2c	; 44
+ 7c4:	8f 7d       	andi	r24, 0xDF	; 223
+ 7c6:	8c bd       	out	0x2c, r24	; 44
+ 7c8:	8c b5       	in	r24, 0x2c	; 44
+ 7ca:	8f 7e       	andi	r24, 0xEF	; 239
+ 7cc:	8c bd       	out	0x2c, r24	; 44
+ 7ce:	08 95       	ret
+
+000007d0 <pinMode>:
+pinMode():
+ 7d0:	cf 93       	push	r28
+ 7d2:	df 93       	push	r29
+ 7d4:	87 ff       	sbrs	r24, 7
+ 7d6:	11 c0       	rjmp	.+34     	; 0x7fa <pinMode+0x2a>
+ 7d8:	8f 77       	andi	r24, 0x7F	; 127
+ 7da:	41 f0       	breq	.+16     	; 0x7ec <pinMode+0x1c>
+ 7dc:	81 30       	cpi	r24, 0x01	; 1
+ 7de:	41 f0       	breq	.+16     	; 0x7f0 <pinMode+0x20>
+ 7e0:	82 30       	cpi	r24, 0x02	; 2
+ 7e2:	41 f0       	breq	.+16     	; 0x7f4 <pinMode+0x24>
+ 7e4:	83 30       	cpi	r24, 0x03	; 3
+ 7e6:	41 f0       	breq	.+16     	; 0x7f8 <pinMode+0x28>
+ 7e8:	8f ef       	ldi	r24, 0xFF	; 255
+ 7ea:	07 c0       	rjmp	.+14     	; 0x7fa <pinMode+0x2a>
+ 7ec:	85 e0       	ldi	r24, 0x05	; 5
+ 7ee:	05 c0       	rjmp	.+10     	; 0x7fa <pinMode+0x2a>
+ 7f0:	82 e0       	ldi	r24, 0x02	; 2
+ 7f2:	03 c0       	rjmp	.+6      	; 0x7fa <pinMode+0x2a>
+ 7f4:	84 e0       	ldi	r24, 0x04	; 4
+ 7f6:	01 c0       	rjmp	.+2      	; 0x7fa <pinMode+0x2a>
+ 7f8:	83 e0       	ldi	r24, 0x03	; 3
+ 7fa:	90 e0       	ldi	r25, 0x00	; 0
+ 7fc:	fc 01       	movw	r30, r24
+ 7fe:	ec 5d       	subi	r30, 0xDC	; 220
+ 800:	ff 4f       	sbci	r31, 0xFF	; 255
+ 802:	24 91       	lpm	r18, Z
+ 804:	fc 01       	movw	r30, r24
+ 806:	e6 5d       	subi	r30, 0xD6	; 214
+ 808:	ff 4f       	sbci	r31, 0xFF	; 255
+ 80a:	84 91       	lpm	r24, Z
+ 80c:	88 23       	and	r24, r24
+ 80e:	61 f1       	breq	.+88     	; 0x868 <pinMode+0x98>
+ 810:	90 e0       	ldi	r25, 0x00	; 0
+ 812:	88 0f       	add	r24, r24
+ 814:	99 1f       	adc	r25, r25
+ 816:	fc 01       	movw	r30, r24
+ 818:	e4 5c       	subi	r30, 0xC4	; 196
+ 81a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 81c:	c5 91       	lpm	r28, Z+
+ 81e:	d4 91       	lpm	r29, Z
+ 820:	fc 01       	movw	r30, r24
+ 822:	ea 5c       	subi	r30, 0xCA	; 202
+ 824:	ff 4f       	sbci	r31, 0xFF	; 255
+ 826:	a5 91       	lpm	r26, Z+
+ 828:	b4 91       	lpm	r27, Z
+ 82a:	61 11       	cpse	r22, r1
+ 82c:	09 c0       	rjmp	.+18     	; 0x840 <pinMode+0x70>
+ 82e:	9f b7       	in	r25, 0x3f	; 63
+ 830:	f8 94       	cli
+ 832:	88 81       	ld	r24, Y
+ 834:	20 95       	com	r18
+ 836:	82 23       	and	r24, r18
+ 838:	88 83       	st	Y, r24
+ 83a:	ec 91       	ld	r30, X
+ 83c:	2e 23       	and	r18, r30
+ 83e:	0b c0       	rjmp	.+22     	; 0x856 <pinMode+0x86>
+ 840:	62 30       	cpi	r22, 0x02	; 2
+ 842:	61 f4       	brne	.+24     	; 0x85c <pinMode+0x8c>
+ 844:	9f b7       	in	r25, 0x3f	; 63
+ 846:	f8 94       	cli
+ 848:	88 81       	ld	r24, Y
+ 84a:	32 2f       	mov	r19, r18
+ 84c:	30 95       	com	r19
+ 84e:	83 23       	and	r24, r19
+ 850:	88 83       	st	Y, r24
+ 852:	ec 91       	ld	r30, X
+ 854:	2e 2b       	or	r18, r30
+ 856:	2c 93       	st	X, r18
+ 858:	9f bf       	out	0x3f, r25	; 63
+ 85a:	06 c0       	rjmp	.+12     	; 0x868 <pinMode+0x98>
+ 85c:	8f b7       	in	r24, 0x3f	; 63
+ 85e:	f8 94       	cli
+ 860:	e8 81       	ld	r30, Y
+ 862:	2e 2b       	or	r18, r30
+ 864:	28 83       	st	Y, r18
+ 866:	8f bf       	out	0x3f, r24	; 63
+ 868:	df 91       	pop	r29
+ 86a:	cf 91       	pop	r28
+ 86c:	08 95       	ret
+
+0000086e <digitalRead>:
+digitalRead():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:166
+
+int digitalRead(uint8_t pin)
+{
+ 86e:	cf 93       	push	r28
+ 870:	df 93       	push	r29
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167
+	if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+ 872:	87 ff       	sbrs	r24, 7
+ 874:	11 c0       	rjmp	.+34     	; 0x898 <digitalRead+0x2a>
+ 876:	8f 77       	andi	r24, 0x7F	; 127
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167 (discriminator 1)
+ 878:	41 f0       	breq	.+16     	; 0x88a <digitalRead+0x1c>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167 (discriminator 2)
+ 87a:	81 30       	cpi	r24, 0x01	; 1
+ 87c:	41 f0       	breq	.+16     	; 0x88e <digitalRead+0x20>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167 (discriminator 4)
+ 87e:	82 30       	cpi	r24, 0x02	; 2
+ 880:	41 f0       	breq	.+16     	; 0x892 <digitalRead+0x24>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167 (discriminator 6)
+ 882:	83 30       	cpi	r24, 0x03	; 3
+ 884:	41 f0       	breq	.+16     	; 0x896 <digitalRead+0x28>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:167
+ 886:	8f ef       	ldi	r24, 0xFF	; 255
+ 888:	07 c0       	rjmp	.+14     	; 0x898 <digitalRead+0x2a>
+ 88a:	85 e0       	ldi	r24, 0x05	; 5
+ 88c:	05 c0       	rjmp	.+10     	; 0x898 <digitalRead+0x2a>
+ 88e:	82 e0       	ldi	r24, 0x02	; 2
+ 890:	03 c0       	rjmp	.+6      	; 0x898 <digitalRead+0x2a>
+ 892:	84 e0       	ldi	r24, 0x04	; 4
+ 894:	01 c0       	rjmp	.+2      	; 0x898 <digitalRead+0x2a>
+ 896:	83 e0       	ldi	r24, 0x03	; 3
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:168
+	uint8_t timer = digitalPinToTimer(pin);
+ 898:	28 2f       	mov	r18, r24
+ 89a:	30 e0       	ldi	r19, 0x00	; 0
+ 89c:	f9 01       	movw	r30, r18
+ 89e:	e2 5e       	subi	r30, 0xE2	; 226
+ 8a0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 8a2:	84 91       	lpm	r24, Z
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:169
+	uint8_t bit = digitalPinToBitMask(pin);
+ 8a4:	f9 01       	movw	r30, r18
+ 8a6:	ec 5d       	subi	r30, 0xDC	; 220
+ 8a8:	ff 4f       	sbci	r31, 0xFF	; 255
+ 8aa:	d4 91       	lpm	r29, Z
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:170
+	uint8_t port = digitalPinToPort(pin);
+ 8ac:	f9 01       	movw	r30, r18
+ 8ae:	e6 5d       	subi	r30, 0xD6	; 214
+ 8b0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 8b2:	c4 91       	lpm	r28, Z
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:172
+
+	if (port == NOT_A_PIN) return LOW;
+ 8b4:	cc 23       	and	r28, r28
+ 8b6:	89 f0       	breq	.+34     	; 0x8da <digitalRead+0x6c>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:176
+
+	// If the pin that support PWM output, we need to turn it off
+	// before getting a digital reading.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+ 8b8:	81 11       	cpse	r24, r1
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:176 (discriminator 1)
+ 8ba:	67 df       	rcall	.-306    	; 0x78a <turnOffPWM>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:178
+
+	if (*portInputRegister(port) & bit) return HIGH;
+ 8bc:	ec 2f       	mov	r30, r28
+ 8be:	f0 e0       	ldi	r31, 0x00	; 0
+ 8c0:	ee 0f       	add	r30, r30
+ 8c2:	ff 1f       	adc	r31, r31
+ 8c4:	e0 5d       	subi	r30, 0xD0	; 208
+ 8c6:	ff 4f       	sbci	r31, 0xFF	; 255
+ 8c8:	a5 91       	lpm	r26, Z+
+ 8ca:	b4 91       	lpm	r27, Z
+ 8cc:	ec 91       	ld	r30, X
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:172
+	if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+	uint8_t timer = digitalPinToTimer(pin);
+	uint8_t bit = digitalPinToBitMask(pin);
+	uint8_t port = digitalPinToPort(pin);
+
+	if (port == NOT_A_PIN) return LOW;
+ 8ce:	ed 23       	and	r30, r29
+ 8d0:	81 e0       	ldi	r24, 0x01	; 1
+ 8d2:	90 e0       	ldi	r25, 0x00	; 0
+ 8d4:	21 f4       	brne	.+8      	; 0x8de <digitalRead+0x70>
+ 8d6:	80 e0       	ldi	r24, 0x00	; 0
+ 8d8:	02 c0       	rjmp	.+4      	; 0x8de <digitalRead+0x70>
+ 8da:	80 e0       	ldi	r24, 0x00	; 0
+ 8dc:	90 e0       	ldi	r25, 0x00	; 0
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring_digital.c:180
+	// before getting a digital reading.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+	if (*portInputRegister(port) & bit) return HIGH;
+	return LOW;
+}
+ 8de:	df 91       	pop	r29
+ 8e0:	cf 91       	pop	r28
+ 8e2:	08 95       	ret
+
+000008e4 <main>:
+main():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/main.cpp:6
+#include <Arduino.h>
+
+int main(void)
+{
+	#ifdef TUNED_OSCCAL_VALUE
+	OSCCAL = TUNED_OSCCAL_VALUE; //set the oscillator calibration value based on the pins_arduino.h file. If this is not set, it will be optimised away
+ 8e4:	81 b7       	in	r24, 0x31	; 49
+ 8e6:	81 bf       	out	0x31, r24	; 49
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/main.cpp:8
+    #endif
+    init();
+ 8e8:	5c d0       	rcall	.+184    	; 0x9a2 <init>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/main.cpp:10
+
+	setup();
+ 8ea:	95 dc       	rcall	.-1750   	; 0x216 <setup>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/main.cpp:13 (discriminator 1)
+    
+	for (;;)
+		loop();
+ 8ec:	ce db       	rcall	.-2148   	; 0x8a <loop>
+ 8ee:	fe cf       	rjmp	.-4      	; 0x8ec <main+0x8>
+
+000008f0 <initToneTimerInternal>:
+initToneTimerInternal():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:590
+PLLCSR |= PCKE;
+}
+#endif
+  #if INITIALIZE_SECONDARY_TIMERS
+  // Prepare the timer for PWM
+    initToneTimerInternal();
+ 8f0:	80 b7       	in	r24, 0x30	; 48
+ 8f2:	80 7f       	andi	r24, 0xF0	; 240
+ 8f4:	80 bf       	out	0x30, r24	; 48
+ 8f6:	80 b7       	in	r24, 0x30	; 48
+ 8f8:	80 68       	ori	r24, 0x80	; 128
+ 8fa:	80 bf       	out	0x30, r24	; 48
+ 8fc:	8c b5       	in	r24, 0x2c	; 44
+ 8fe:	80 64       	ori	r24, 0x40	; 64
+ 900:	8c bd       	out	0x2c, r24	; 44
+ 902:	8f ef       	ldi	r24, 0xFF	; 255
+ 904:	8d bd       	out	0x2d, r24	; 45
+ 906:	80 b7       	in	r24, 0x30	; 48
+ 908:	87 60       	ori	r24, 0x07	; 7
+ 90a:	80 bf       	out	0x30, r24	; 48
+ 90c:	08 95       	ret
+
+0000090e <__vector_5>:
+__vector_5():
+ 90e:	1f 92       	push	r1
+ 910:	0f 92       	push	r0
+ 912:	0f b6       	in	r0, 0x3f	; 63
+ 914:	0f 92       	push	r0
+ 916:	11 24       	eor	r1, r1
+ 918:	2f 93       	push	r18
+ 91a:	3f 93       	push	r19
+ 91c:	8f 93       	push	r24
+ 91e:	9f 93       	push	r25
+ 920:	af 93       	push	r26
+ 922:	bf 93       	push	r27
+ 924:	80 91 9c 00 	lds	r24, 0x009C	; 0x80009c <millis_timer_millis>
+ 928:	90 91 9d 00 	lds	r25, 0x009D	; 0x80009d <millis_timer_millis+0x1>
+ 92c:	a0 91 9e 00 	lds	r26, 0x009E	; 0x80009e <millis_timer_millis+0x2>
+ 930:	b0 91 9f 00 	lds	r27, 0x009F	; 0x80009f <millis_timer_millis+0x3>
+ 934:	30 91 9b 00 	lds	r19, 0x009B	; 0x80009b <millis_timer_fract>
+ 938:	26 e0       	ldi	r18, 0x06	; 6
+ 93a:	23 0f       	add	r18, r19
+ 93c:	2d 37       	cpi	r18, 0x7D	; 125
+ 93e:	30 f0       	brcs	.+12     	; 0x94c <__vector_5+0x3e>
+ 940:	29 e8       	ldi	r18, 0x89	; 137
+ 942:	23 0f       	add	r18, r19
+ 944:	03 96       	adiw	r24, 0x03	; 3
+ 946:	a1 1d       	adc	r26, r1
+ 948:	b1 1d       	adc	r27, r1
+ 94a:	03 c0       	rjmp	.+6      	; 0x952 <__vector_5+0x44>
+ 94c:	02 96       	adiw	r24, 0x02	; 2
+ 94e:	a1 1d       	adc	r26, r1
+ 950:	b1 1d       	adc	r27, r1
+ 952:	20 93 9b 00 	sts	0x009B, r18	; 0x80009b <millis_timer_fract>
+ 956:	80 93 9c 00 	sts	0x009C, r24	; 0x80009c <millis_timer_millis>
+ 95a:	90 93 9d 00 	sts	0x009D, r25	; 0x80009d <millis_timer_millis+0x1>
+ 95e:	a0 93 9e 00 	sts	0x009E, r26	; 0x80009e <millis_timer_millis+0x2>
+ 962:	b0 93 9f 00 	sts	0x009F, r27	; 0x80009f <millis_timer_millis+0x3>
+ 966:	80 91 a0 00 	lds	r24, 0x00A0	; 0x8000a0 <millis_timer_overflow_count>
+ 96a:	90 91 a1 00 	lds	r25, 0x00A1	; 0x8000a1 <millis_timer_overflow_count+0x1>
+ 96e:	a0 91 a2 00 	lds	r26, 0x00A2	; 0x8000a2 <millis_timer_overflow_count+0x2>
+ 972:	b0 91 a3 00 	lds	r27, 0x00A3	; 0x8000a3 <millis_timer_overflow_count+0x3>
+ 976:	01 96       	adiw	r24, 0x01	; 1
+ 978:	a1 1d       	adc	r26, r1
+ 97a:	b1 1d       	adc	r27, r1
+ 97c:	80 93 a0 00 	sts	0x00A0, r24	; 0x8000a0 <millis_timer_overflow_count>
+ 980:	90 93 a1 00 	sts	0x00A1, r25	; 0x8000a1 <millis_timer_overflow_count+0x1>
+ 984:	a0 93 a2 00 	sts	0x00A2, r26	; 0x8000a2 <millis_timer_overflow_count+0x2>
+ 988:	b0 93 a3 00 	sts	0x00A3, r27	; 0x8000a3 <millis_timer_overflow_count+0x3>
+ 98c:	bf 91       	pop	r27
+ 98e:	af 91       	pop	r26
+ 990:	9f 91       	pop	r25
+ 992:	8f 91       	pop	r24
+ 994:	3f 91       	pop	r19
+ 996:	2f 91       	pop	r18
+ 998:	0f 90       	pop	r0
+ 99a:	0f be       	out	0x3f, r0	; 63
+ 99c:	0f 90       	pop	r0
+ 99e:	1f 90       	pop	r1
+ 9a0:	18 95       	reti
+
+000009a2 <init>:
+init():
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:753
+  #endif
+  #endif
+
+  // Use the Millis Timer for fast PWM (unless it doesn't have an output).
+  #if (TIMER_TO_USE_FOR_MILLIS == 0) && defined(WGM01)
+  sbi(TCCR0A, WGM01);
+ 9a2:	8a b5       	in	r24, 0x2a	; 42
+ 9a4:	82 60       	ori	r24, 0x02	; 2
+ 9a6:	8a bd       	out	0x2a, r24	; 42
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:754
+  sbi(TCCR0A, WGM00);
+ 9a8:	8a b5       	in	r24, 0x2a	; 42
+ 9aa:	81 60       	ori	r24, 0x01	; 1
+ 9ac:	8a bd       	out	0x2a, r24	; 42
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:777
+  #endif
+  
+  // Millis timer is always processor clock divided by MillisTimer_Prescale_Value (64)
+  #if (TIMER_TO_USE_FOR_MILLIS == 0)
+   #ifdef TCCR0B
+    TCCR0B = (TCCR0B & ~((1<<CS02)|(1<<CS01)|(1<<CS00))) | (MillisTimer_Prescale_Index << CS00);
+ 9ae:	83 b7       	in	r24, 0x33	; 51
+ 9b0:	88 7f       	andi	r24, 0xF8	; 248
+ 9b2:	83 60       	ori	r24, 0x03	; 3
+ 9b4:	83 bf       	out	0x33, r24	; 51
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:789
+  TCCR1B = (TCCR1B & ~((1<<CS13)|(1<<CS12)|(1<<CS11)|(1<<CS10))) | (MillisTimer_Prescale_Index << CS10);
+  #elif (TIMER_TO_USE_FOR_MILLIS == 1)
+  TCCR1B = (TCCR1B & ~((1<<CS12)|(1<<CS11)|(1<<CS10))) | (MillisTimer_Prescale_Index << CS10);
+  #endif
+  // this needs to be called before setup() or some functions won't work there
+  sei();
+ 9b6:	78 94       	sei
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:793
+  
+  // Enable the overlow interrupt (this is the basic system tic-toc for millis)
+  #if defined(TIMSK) && defined(TOIE0) && (TIMER_TO_USE_FOR_MILLIS == 0)
+  sbi(TIMSK, TOIE0);
+ 9b8:	89 b7       	in	r24, 0x39	; 57
+ 9ba:	82 60       	ori	r24, 0x02	; 2
+ 9bc:	89 bf       	out	0x39, r24	; 57
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:806
+  #error Millis() Timer overflow interrupt not set correctly
+  #endif
+  
+  // Initialize the timer used for Tone
+  #if INITIALIZE_SECONDARY_TIMERS
+    initToneTimerInternal();
+ 9be:	98 df       	rcall	.-208    	; 0x8f0 <initToneTimerInternal>
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:813
+
+  // Initialize the ADC
+  #if defined( INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER ) && INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER
+  #if defined(ADCSRA)
+    // set a2d prescale factor
+	ADCSRA = (ADCSRA & ~((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0))) | (ADC_ARDUINO_PRESCALER << ADPS0) | (1<<ADEN);
+ 9c0:	86 b1       	in	r24, 0x06	; 6
+ 9c2:	88 77       	andi	r24, 0x78	; 120
+ 9c4:	86 68       	ori	r24, 0x86	; 134
+ 9c6:	86 b9       	out	0x06, r24	; 6
+C:\Users\wesley.furuya\AppData\Local\Arduino15\packages\ATTinyCore\hardware\avr\1.2.3\cores\tiny/wiring.c:815
+    // enable a2d conversions
+    sbi(ADCSRA, ADEN);
+ 9c8:	37 9a       	sbi	0x06, 7	; 6
+ 9ca:	08 95       	ret
+
+000009cc <eeprom_read_byte>:
+eeprom_read_byte():
+ 9cc:	e1 99       	sbic	0x1c, 1	; 28
+ 9ce:	fe cf       	rjmp	.-4      	; 0x9cc <eeprom_read_byte>
+ 9d0:	9f bb       	out	0x1f, r25	; 31
+ 9d2:	8e bb       	out	0x1e, r24	; 30
+ 9d4:	e0 9a       	sbi	0x1c, 0	; 28
+ 9d6:	99 27       	eor	r25, r25
+ 9d8:	8d b3       	in	r24, 0x1d	; 29
+ 9da:	08 95       	ret
+
+000009dc <eeprom_write_byte>:
+eeprom_write_byte():
+ 9dc:	26 2f       	mov	r18, r22
+
+000009de <eeprom_write_r18>:
+ 9de:	e1 99       	sbic	0x1c, 1	; 28
+ 9e0:	fe cf       	rjmp	.-4      	; 0x9de <eeprom_write_r18>
+ 9e2:	1c ba       	out	0x1c, r1	; 28
+ 9e4:	9f bb       	out	0x1f, r25	; 31
+ 9e6:	8e bb       	out	0x1e, r24	; 30
+ 9e8:	2d bb       	out	0x1d, r18	; 29
+ 9ea:	0f b6       	in	r0, 0x3f	; 63
+ 9ec:	f8 94       	cli
+ 9ee:	e2 9a       	sbi	0x1c, 2	; 28
+ 9f0:	e1 9a       	sbi	0x1c, 1	; 28
+ 9f2:	0f be       	out	0x3f, r0	; 63
+ 9f4:	01 96       	adiw	r24, 0x01	; 1
+ 9f6:	08 95       	ret
+
+000009f8 <_exit>:
+exit():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2279
+ 9f8:	f8 94       	cli
+
+000009fa <__stop_program>:
+__stop_program():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2281
+ 9fa:	ff cf       	rjmp	.-2      	; 0x9fa <__stop_program>
