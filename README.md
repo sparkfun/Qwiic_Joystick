@@ -19,8 +19,8 @@ Thanks to an ATtiny85 on the [Qwiic Joystick](https://www.sparkfun.com/products/
 | 0x01-0x02 | Firmware Version |
 | 0x03-0x04 | Horizontal Position (MSB First) |
 | 0x05-0x06 | Vertical Position (MSB First) |
-| 0x07 | Button Position |
-| 0x08 | Button Status: Indicates if button was pressed since last read of button state. Clears after read. |
+| 0x07 | Button Position; clears after read. |
+| 0x08 | Button Status: Indicates if button was pressed since last read of button state (i.e. last time reg `0x07` was read). |
 | 0x09 | Lock Register for I2C Address Change |
 | 0x0A | Current I2C Slave Address. Can only be changed once Lock Register is set to 0x13, then it clears the Lock Register. |
 
